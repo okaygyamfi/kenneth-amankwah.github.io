@@ -1,11 +1,31 @@
-# Kenneth Amankwah Portfolio
+# Kenneth Amankwah — Data Analyst
 
-This is my personal data analyst portfolio hosted on GitHub Pages.
+Welcome to my data analytics portfolio. I use data to uncover insights and help businesses make informed decisions.
 
-## Deployment
-1. Create a new repository named `kenneth-amankwah.github.io`
-2. Upload these files.
-3. Go to Settings → Pages → Deploy from main branch.
-4. Your live site will appear at https://kenneth-amankwah.github.io
+## 🧠 About Me
+I am a **Data Analyst** with hands-on experience in **Python, SQL, Power BI, and Tableau**.  
+Through the **Generation program**, I gained practical skills in data cleaning, visualization, and solving real-world problems.  
+I am detail-oriented, collaborative, and always eager to learn and grow in the field of data analytics.
 
-© 2025 Kenneth Amankwah
+## 🛠️ Skills
+**Languages:** Python, SQL  
+**Libraries:** Pandas, NumPy, Matplotlib  
+**Data Visualization:** Power BI, Tableau, Advanced Excel  
+**Other:** Data cleaning, wrangling, preprocessing, VLOOKUP  
+**Tools:** DMS, Adobe Illustrator, Adobe Photoshop  
+**Soft Skills:** Presentation, Communication, Teamwork, Leadership, Adaptability
+
+## 💼 Project
+### BookStore Insight
+**Role:** Lead Analyst  
+Designed a Power BI dashboard showing key metrics and insights about bookstore inventory, helping management make data-driven decisions.  
+**Tools:** Power BI
+
+## 📫 Contact
+**Email:** [nanagyamfiii233@gmail.com](mailto:nanagyamfiii233@gmail.com)  
+**LinkedIn:** [linkedin.com/in/kenneth-amankwah](https://linkedin.com/in/kenneth-amankwah)  
+**GitHub:** [github.com/okaygyamfi](https://github.com/okaygyamfi)
+
+---
+
+> “Turning data into actionable insights that drive growth and innovation.”
