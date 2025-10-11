@@ -1,0 +1,61 @@
+:root {
+  --bg-color: #fff;
+  --text-color: #000;
+  --accent-color: #444;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #000;
+    --text-color: #fff;
+    --accent-color: #bbb;
+  }
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header, footer {
+  text-align: center;
+  padding: 2em 1em;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+button, .btn {
+  border: 1px solid var(--accent-color);
+  background: none;
+  color: var(--text-color);
+  padding: 0.6em 1.2em;
+  cursor: pointer;
+  margin-top: 1em;
+}
+
+button:hover, .btn:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
+
+img {
+  max-width: 100%;
+  border: 1px solid var(--accent-color);
+}
