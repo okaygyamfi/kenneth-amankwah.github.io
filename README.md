@@ -29,6 +29,13 @@ Analyzed production and assembly line records to generate insights to help exped
 
 **Tools:** Excel and Tableau
 
+### Ghana FinTech Credit Scoring System
+**Role:** Data Analyst
+
+Developed an alternative credit scoring model using Python and machine learning to assess loan eligibility for Ghana's informal sector. Analyzed synthetic data that reflects real-world mobile money transaction patterns, bill payment history, and savings behavior to predict credit risk, enabling financial institutions to serve 42% more customers while maintaining sustainable 5.8% default rates
+
+**Tools:** Python
+
 ##  Contact
 **Email:** (nanagyamfiii233@gmail.com)  
 **LinkedIn:** (https://www.linkedin.com/in/kenneth-amankwah-0990a124a/)  
