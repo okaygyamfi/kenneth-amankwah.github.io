@@ -25,7 +25,8 @@ Designed a Power BI dashboard showing key metrics and insights about bookstore i
 ### Daikibo Assembly Line Analysis
 **Role:** Lead Analyst
 
-Analyzed production and assembly line records to generate insights to help expedite repairs and plan operations for the company’s growth. Cleaned and analyzed the data using Microsoft Excel and Tableau for visualization and insights.
+Analyzed production and assembly line records to generate insights to help expedite repairs and plan operations for the company’s growth. Cleaned and analyzed the data using Microsoft Excel and Tableau for visualization and insights. 
+
 **Tools:** Excel and Tableau
 
 ##  Contact
