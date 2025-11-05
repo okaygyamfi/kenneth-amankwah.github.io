@@ -21,6 +21,20 @@ I am detail-oriented, collaborative, and always eager to learn and grow in the f
 Designed a Power BI dashboard showing key metrics and insights about bookstore inventory, helping management make data-driven decisions.  
 **Tools:** Power BI
 
+### Daikibo Assembly Line Analysis
+**Role:** Lead Analyst
+
+Analyzed production and assembly line records to generate insights to help expedite repairs and plan operations for the company’s growth. Cleaned and analyzed the data using Microsoft Excel and Tableau for visualization and insights. 
+
+**Tools:** Excel and Tableau
+
+### Ghana FinTech Credit Scoring System
+**Role:** Data Analyst
+
+Developed an alternative credit scoring model using Python and machine learning to assess loan eligibility for Ghana's informal sector. Analyzed synthetic data that reflects real-world mobile money transaction patterns, bill payment history, and savings behavior to predict credit risk, enabling financial institutions to serve 42% more customers while maintaining sustainable 5.8% default rates
+
+**Tools:** Python
+
 ##  Contact
 **Email:** (nanagyamfiii233@gmail.com)  
 **LinkedIn:** (https://www.linkedin.com/in/kenneth-amankwah-0990a124a/)  
