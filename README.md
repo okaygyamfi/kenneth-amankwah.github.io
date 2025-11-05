@@ -19,6 +19,7 @@ I am detail-oriented, collaborative, and always eager to learn and grow in the f
 ### BookStore Insight
 **Role:** Lead Analyst  
 Designed a Power BI dashboard showing key metrics and insights about bookstore inventory, helping management make data-driven decisions.  
+
 **Tools:** Power BI
 
 ### Daikibo Assembly Line Analysis
