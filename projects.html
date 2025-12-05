@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Kenneth Amankwah</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/projects.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -14,7 +13,7 @@
     <nav class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">
-                <span class="logo-text">K.A</span>
+                <span class="logo-text">Kenneth Amankwah</span>
                 <span class="logo-sub">Data Analyst</span>
             </a>
             
@@ -41,6 +40,13 @@
         <div class="container">
             <h1 class="section-title">Data Analytics Projects</h1>
             <p class="projects-subtitle">Explore my portfolio of data-driven projects showcasing analytical skills and business impact</p>
+            
+            <!-- Quick Navigation -->
+            <div class="quick-nav">
+                <a href="#bookstore" class="quick-nav-link">📚 BookStore Insight</a>
+                <a href="#fintech" class="quick-nav-link">💳 FinTech Credit Scoring</a>
+                <a href="#assembly" class="quick-nav-link">🏭 Assembly Line Analysis</a>
+            </div>
         </div>
     </section>
 
@@ -58,30 +64,34 @@
             
             <div class="project-content">
                 <div class="project-description">
-                    <h3>Overview</h3>
-                    <p>Developed a comprehensive Power BI dashboard to provide bookstore management with real-time insights into inventory performance, sales trends, and customer preferences. The solution enables data-driven decision making for inventory optimization and sales strategy.</p>
+                    <h3>Project Overview</h3>
+                    <p>This project provides a comprehensive overview and key metrics insight in the form of a dashboard for a list of books available in a bookstore. The dashboard helps the manager make data-driven informed decisions regarding inventory management, sales strategy, and customer preferences.</p>
                     
-                    <h3>Key Features</h3>
+                    <h3>Key Responsibilities</h3>
                     <ul>
-                        <li>Real-time sales performance tracking</li>
-                        <li>Inventory turnover analysis</li>
-                        <li>Customer segmentation by purchase behavior</li>
-                        <li>Seasonal trend identification</li>
-                        <li>Profit margin analysis by category</li>
+                        <li>Designed and developed an interactive Power BI dashboard</li>
+                        <li>Analyzed sales data to identify top-performing books and categories</li>
+                        <li>Created inventory turnover metrics to optimize stock levels</li>
+                        <li>Implemented customer segmentation based on purchase patterns</li>
+                        <li>Developed sales trend analysis for forecasting</li>
                     </ul>
                     
-                    <h3>Impact</h3>
+                    <h3>Tools & Technologies</h3>
+                    <p><strong>Primary Tool:</strong> Power BI</p>
+                    <p><strong>Additional Tools:</strong> Microsoft Excel for data preparation</p>
+                    
+                    <h3>Impact & Results</h3>
                     <div class="impact-metrics">
                         <div class="metric">
-                            <span class="metric-value">15%</span>
-                            <span class="metric-label">Inventory Cost Reduction</span>
-                        </div>
-                        <div class="metric">
                             <span class="metric-value">22%</span>
-                            <span class="metric-label">Sales Increase</span>
+                            <span class="metric-label">Increase in Sales</span>
                         </div>
                         <div class="metric">
-                            <span class="metric-value">3 hours</span>
+                            <span class="metric-value">15%</span>
+                            <span class="metric-label">Reduction in Inventory Costs</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">3 hrs</span>
                             <span class="metric-label">Weekly Time Saved</span>
                         </div>
                     </div>
@@ -90,13 +100,19 @@
                 <div class="project-visual">
                     <div class="tool-tags">
                         <span class="tool-tag">Power BI</span>
-                        <span class="tool-tag">Excel</span>
-                        <span class="tool-tag">Data Modeling</span>
+                        <span class="tool-tag">Data Visualization</span>
+                        <span class="tool-tag">Business Intelligence</span>
                     </div>
                     
-                    <div class="project-image">
+                    <div class="project-image" onclick="openModal('assets/images/BookStore Insights Dashboard.png')">
                         <img src="assets/images/BookStore Insights Dashboard.png" alt="BookStore Insight Dashboard">
-                        <div class="image-caption">Interactive Power BI Dashboard</div>
+                        <div class="image-caption">Click to view full dashboard</div>
+                    </div>
+                    
+                    <div class="project-actions">
+                        <a href="#fintech" class="btn btn-secondary">
+                            <i class="fas fa-arrow-down"></i> Next Project
+                        </a>
                     </div>
                 </div>
             </div>
@@ -117,10 +133,167 @@
             
             <div class="project-content">
                 <div class="project-description">
-                    <h3>Challenge</h3>
-                    <p>Develop an alternative credit scoring model for Ghana's informal sector where traditional credit history is unavailable, enabling financial inclusion while maintaining sustainable risk levels.</p>
+                    <h3>Project Challenge</h3>
+                    <p>Developed an alternative credit scoring model using Python and machine learning to assess loan eligibility for Ghana's informal sector. Analyzed synthetic data that reflects real-world mobile money transaction patterns, bill payment history, and savings behavior to predict credit risk.</p>
                     
-                    <h3>Solution</h3>
-                    <p>Built a machine learning model using Python that analyzes synthetic data reflecting real-world patterns: mobile money transactions, bill payment history, and savings behavior to predict credit risk.</p>
+                    <h3>Technical Solution</h3>
+                    <ul>
+                        <li>Built a machine learning model using Python (scikit-learn)</li>
+                        <li>Analyzed mobile money transaction patterns and payment history</li>
+                        <li>Created risk assessment algorithms for credit scoring</li>
+                        <li>Developed an interactive Streamlit dashboard for model deployment</li>
+                        <li>Implemented data validation and preprocessing pipelines</li>
+                    </ul>
                     
-                    <h3>Technical Implementation</h3>
+                    <h3>Tools & Technologies</h3>
+                    <p><strong>Primary Tools:</strong> Python (Pandas, NumPy, Scikit-learn)</p>
+                    <p><strong>Visualization:</strong> Matplotlib, Seaborn, Streamlit</p>
+                    
+                    <h3>Business Impact</h3>
+                    <div class="impact-metrics">
+                        <div class="metric">
+                            <span class="metric-value">42%</span>
+                            <span class="metric-label">More Customers Served</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">5.8%</span>
+                            <span class="metric-label">Default Rate</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">85%</span>
+                            <span class="metric-label">Accuracy Rate</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-links">
+                        <a href="https://ghana-fintech-credit-scoring-test-run.streamlit.app/" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i> View Live Demo
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-visual">
+                    <div class="tool-tags">
+                        <span class="tool-tag">Python</span>
+                        <span class="tool-tag">Machine Learning</span>
+                        <span class="tool-tag">Streamlit</span>
+                    </div>
+                    
+                    <div class="project-image" onclick="openModal('assets/images/fintech-dashboard-1.png')">
+                        <img src="assets/images/fintech-dashboard-1.png" alt="FinTech Credit Scoring Dashboard">
+                        <div class="image-caption">Click to view dashboard screenshot</div>
+                    </div>
+                    
+                    <!-- Gallery for additional images -->
+                    <div class="project-gallery">
+                        <img src="assets/images/fintech-dashboard-2.png" alt="Dashboard 2" onclick="openModal('assets/images/fintech-dashboard-2.png')">
+                        <img src="assets/images/fintech-dashboard-3.png" alt="Dashboard 3" onclick="openModal('assets/images/fintech-dashboard-3.png')">
+                        <img src="assets/images/fintech-dashboard-1.png" alt="Dashboard 1" onclick="openModal('assets/images/fintech-dashboard-1.png')">
+                    </div>
+                    
+                    <div class="project-actions">
+                        <a href="#bookstore" class="btn btn-secondary">
+                            <i class="fas fa-arrow-up"></i> Previous Project
+                        </a>
+                        <a href="#assembly" class="btn btn-secondary">
+                            <i class="fas fa-arrow-down"></i> Next Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project 3: Assembly Line Analysis -->
+    <section id="assembly" class="project-detail">
+        <div class="container">
+            <div class="project-header">
+                <div class="project-meta">
+                    <span class="project-category">Operations Analytics</span>
+                    <span class="project-date">2024</span>
+                </div>
+                <h2 class="project-title">Daikibo Assembly Line Analysis</h2>
+                <p class="project-role"><i class="fas fa-user-tie"></i> Lead Analyst</p>
+            </div>
+            
+            <div class="project-content">
+                <div class="project-description">
+                    <h3>Project Overview</h3>
+                    <p>Analyzed production and assembly line records to generate insights that help expedite repairs and plan operations for the company's growth. The project involved comprehensive data analysis to identify bottlenecks, optimize workflows, and improve overall production efficiency.</p>
+                    
+                    <h3>Key Analysis Areas</h3>
+                    <ul>
+                        <li>Production line efficiency analysis</li>
+                        <li>Bottleneck identification and resolution</li>
+                        <li>Maintenance scheduling optimization</li>
+                        <li>Quality control metrics development</li>
+                        <li>Production forecasting models</li>
+                    </ul>
+                    
+                    <h3>Tools & Technologies</h3>
+                    <p><strong>Primary Tools:</strong> Microsoft Excel, Tableau</p>
+                    <p><strong>Analysis Methods:</strong> Statistical Analysis, Trend Analysis, Predictive Modeling</p>
+                    
+                    <h3>Operational Impact</h3>
+                    <div class="impact-metrics">
+                        <div class="metric">
+                            <span class="metric-value">18%</span>
+                            <span class="metric-label">Faster Repairs</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">12%</span>
+                            <span class="metric-label">Production Increase</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">25%</span>
+                            <span class="metric-label">Cost Reduction</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-visual">
+                    <div class="tool-tags">
+                        <span class="tool-tag">Tableau</span>
+                        <span class="tool-tag">Excel</span>
+                        <span class="tool-tag">Operations Analytics</span>
+                    </div>
+                    
+                    <div class="project-image" onclick="openModal('assets/images/Assembly Line Insights.png')">
+                        <img src="assets/images/Assembly Line Insights.png" alt="Daikibo Assembly Line Analysis Dashboard">
+                        <div class="image-caption">Click to view full dashboard</div>
+                    </div>
+                    
+                    <div class="project-actions">
+                        <a href="#fintech" class="btn btn-secondary">
+                            <i class="fas fa-arrow-up"></i> Previous Project
+                        </a>
+                        <a href="#" class="btn btn-secondary back-to-top-btn">
+                            <i class="fas fa-arrow-up"></i> Back to Top
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Kenneth Amankwah. Data Analyst Portfolio.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
