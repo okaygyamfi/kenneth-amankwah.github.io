@@ -7,6 +7,291 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Projects page specific styles */
+        .projects-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        
+        .project-card-full {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin-bottom: 3rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+        }
+        
+        .project-meta {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .project-category {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 0.25rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .project-year {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .project-header {
+            margin-bottom: 2rem;
+        }
+        
+        .project-title {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+        
+        .project-role {
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .project-content {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+        
+        .project-details h3 {
+            color: var(--primary-color);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.25rem;
+        }
+        
+        .project-details h3:first-child {
+            margin-top: 0;
+        }
+        
+        .project-details p {
+            line-height: 1.7;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+        
+        .project-details ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-details li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+        
+        .project-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .stat-box {
+            text-align: center;
+            padding: 1rem;
+            background: var(--bg-secondary);
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-color);
+        }
+        
+        .stat-value {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.25rem;
+        }
+        
+        .stat-label {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+        
+        .project-tools {
+            margin: 1.5rem 0;
+        }
+        
+        .tools-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        .tool-tag {
+            background: var(--bg-secondary);
+            color: var(--primary-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .project-visual {
+            margin-top: 1rem;
+        }
+        
+        .project-image-container {
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+        }
+        
+        .project-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .project-image-container img:hover {
+            transform: scale(1.02);
+        }
+        
+        .image-caption {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: 0.5rem;
+        }
+        
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        
+        .gallery-item {
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            cursor: pointer;
+            border: 1px solid var(--border-color);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .project-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .nav-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--bg-secondary);
+            color: var(--text-color);
+            text-decoration: none;
+            border-radius: var(--radius-sm);
+            font-weight: 500;
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+        }
+        
+        .nav-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .quick-jump {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .jump-link {
+            padding: 0.5rem 1rem;
+            background: var(--bg-secondary);
+            color: var(--text-color);
+            text-decoration: none;
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+        }
+        
+        .jump-link:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        .close-modal:hover {
+            color: #ddd;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -36,248 +321,262 @@
     </nav>
 
     <!-- Projects Header -->
-    <section class="projects-header">
-        <div class="container">
-            <h1 class="section-title">Data Analytics Projects</h1>
-            <p class="projects-subtitle">Explore my portfolio of data-driven projects showcasing analytical skills and business impact</p>
+    <div class="projects-container">
+        <header class="projects-header">
+            <h1 style="font-size: 2.5rem; margin-bottom: 1rem; text-align: center;">Data Analytics Projects</h1>
+            <p style="text-align: center; color: var(--text-light); margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Showcasing data-driven solutions and analytical expertise in business intelligence, machine learning, and operations analytics.
+            </p>
             
             <!-- Quick Navigation -->
-            <div class="quick-nav">
-                <a href="#bookstore" class="quick-nav-link">📚 BookStore Insight</a>
-                <a href="#fintech" class="quick-nav-link">💳 FinTech Credit Scoring</a>
-                <a href="#assembly" class="quick-nav-link">🏭 Assembly Line Analysis</a>
+            <div class="quick-jump">
+                <a href="#bookstore" class="jump-link">
+                    <i class="fas fa-book"></i> BookStore Insight
+                </a>
+                <a href="#fintech" class="jump-link">
+                    <i class="fas fa-credit-card"></i> FinTech Credit Scoring
+                </a>
+                <a href="#assembly" class="jump-link">
+                    <i class="fas fa-industry"></i> Assembly Line Analysis
+                </a>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <!-- Project 1: BookStore Insight -->
-    <section id="bookstore" class="project-detail">
-        <div class="container">
+        <!-- Project 1: BookStore Insight -->
+        <section id="bookstore" class="project-card-full">
+            <div class="project-meta">
+                <span class="project-category">Business Intelligence</span>
+                <span class="project-year">2024</span>
+            </div>
+            
             <div class="project-header">
-                <div class="project-meta">
-                    <span class="project-category">Business Intelligence</span>
-                    <span class="project-date">2024</span>
-                </div>
                 <h2 class="project-title">BookStore Insights Dashboard</h2>
-                <p class="project-role"><i class="fas fa-user-tie"></i> Lead Analyst</p>
+                <p class="project-role">
+                    <i class="fas fa-user-tie"></i> Lead Analyst
+                </p>
             </div>
             
             <div class="project-content">
-                <div class="project-description">
+                <div class="project-details">
                     <h3>Project Overview</h3>
-                    <p>This project provides a comprehensive overview and key metrics insight in the form of a dashboard for a list of books available in a bookstore. The dashboard helps the manager make data-driven informed decisions regarding inventory management, sales strategy, and customer preferences.</p>
+                    <p>Developed a comprehensive Power BI dashboard to provide bookstore management with real-time insights into inventory performance, sales trends, and customer preferences. The solution enables data-driven decision making for inventory optimization and sales strategy.</p>
                     
                     <h3>Key Responsibilities</h3>
                     <ul>
-                        <li>Designed and developed an interactive Power BI dashboard</li>
+                        <li>Designed and developed an interactive Power BI dashboard with real-time metrics</li>
                         <li>Analyzed sales data to identify top-performing books and categories</li>
                         <li>Created inventory turnover metrics to optimize stock levels</li>
                         <li>Implemented customer segmentation based on purchase patterns</li>
-                        <li>Developed sales trend analysis for forecasting</li>
+                        <li>Developed sales trend analysis for accurate forecasting</li>
                     </ul>
                     
-                    <h3>Tools & Technologies</h3>
-                    <p><strong>Primary Tool:</strong> Power BI</p>
-                    <p><strong>Additional Tools:</strong> Microsoft Excel for data preparation</p>
+                    <h3>Business Impact</h3>
+                    <div class="project-stats">
+                        <div class="stat-box">
+                            <span class="stat-value">22%</span>
+                            <span class="stat-label">Increase in Sales</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-value">15%</span>
+                            <span class="stat-label">Cost Reduction</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-value">3 hrs</span>
+                            <span class="stat-label">Time Saved/Week</span>
+                        </div>
+                    </div>
                     
-                    <h3>Impact & Results</h3>
-                    <div class="impact-metrics">
-                        <div class="metric">
-                            <span class="metric-value">22%</span>
-                            <span class="metric-label">Increase in Sales</span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-value">15%</span>
-                            <span class="metric-label">Reduction in Inventory Costs</span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-value">3 hrs</span>
-                            <span class="metric-label">Weekly Time Saved</span>
+                    <div class="project-tools">
+                        <h3>Tools & Technologies</h3>
+                        <div class="tools-tags">
+                            <span class="tool-tag">Power BI</span>
+                            <span class="tool-tag">Excel</span>
+                            <span class="tool-tag">Data Visualization</span>
+                            <span class="tool-tag">Dashboard Design</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="project-visual">
-                    <div class="tool-tags">
-                        <span class="tool-tag">Power BI</span>
-                        <span class="tool-tag">Data Visualization</span>
-                        <span class="tool-tag">Business Intelligence</span>
+                    <div class="project-image-container" onclick="openModal('assets/images/BookStore Insights Dashboard.png')">
+                        <img src="assets/images/BookStore Insights Dashboard.png" alt="BookStore Insights Dashboard">
                     </div>
-                    
-                    <div class="project-image" onclick="openModal('assets/images/BookStore Insights Dashboard.png')">
-                        <img src="assets/images/BookStore Insights Dashboard.png" alt="BookStore Insight Dashboard">
-                        <div class="image-caption">Click to view full dashboard</div>
-                    </div>
-                    
-                    <div class="project-actions">
-                        <a href="#fintech" class="btn btn-secondary">
-                            <i class="fas fa-arrow-down"></i> Next Project
-                        </a>
-                    </div>
+                    <div class="image-caption">Click image to view full size</div>
                 </div>
             </div>
-        </div>
-    </section>
+            
+            <div class="project-navigation">
+                <a href="#fintech" class="nav-btn">
+                    <i class="fas fa-arrow-down"></i> Next Project
+                </a>
+            </div>
+        </section>
 
-    <!-- Project 2: FinTech Credit Scoring -->
-    <section id="fintech" class="project-detail alt-bg">
-        <div class="container">
+        <!-- Project 2: FinTech Credit Scoring -->
+        <section id="fintech" class="project-card-full">
+            <div class="project-meta">
+                <span class="project-category">Machine Learning</span>
+                <span class="project-year">2024</span>
+            </div>
+            
             <div class="project-header">
-                <div class="project-meta">
-                    <span class="project-category">Machine Learning</span>
-                    <span class="project-date">2024</span>
-                </div>
-                <h2 class="project-title">Ghana FinTech Credit Scoring System</h2>
-                <p class="project-role"><i class="fas fa-user-tie"></i> Data Analyst</p>
+                <h2 class="project-title">FinTech Credit Scoring System</h2>
+                <p class="project-role">
+                    <i class="fas fa-user-tie"></i> Data Analyst
+                </p>
             </div>
             
             <div class="project-content">
-                <div class="project-description">
+                <div class="project-details">
                     <h3>Project Challenge</h3>
-                    <p>Developed an alternative credit scoring model using Python and machine learning to assess loan eligibility for Ghana's informal sector. Analyzed synthetic data that reflects real-world mobile money transaction patterns, bill payment history, and savings behavior to predict credit risk.</p>
+                    <p>Developed an alternative credit scoring model for Ghana's informal sector where traditional credit history is unavailable, enabling financial inclusion while maintaining sustainable risk levels.</p>
                     
                     <h3>Technical Solution</h3>
                     <ul>
-                        <li>Built a machine learning model using Python (scikit-learn)</li>
+                        <li>Built a machine learning model using Python (scikit-learn) for credit risk assessment</li>
                         <li>Analyzed mobile money transaction patterns and payment history</li>
-                        <li>Created risk assessment algorithms for credit scoring</li>
+                        <li>Created risk assessment algorithms based on behavioral data</li>
                         <li>Developed an interactive Streamlit dashboard for model deployment</li>
                         <li>Implemented data validation and preprocessing pipelines</li>
                     </ul>
                     
-                    <h3>Tools & Technologies</h3>
-                    <p><strong>Primary Tools:</strong> Python (Pandas, NumPy, Scikit-learn)</p>
-                    <p><strong>Visualization:</strong> Matplotlib, Seaborn, Streamlit</p>
-                    
                     <h3>Business Impact</h3>
-                    <div class="impact-metrics">
-                        <div class="metric">
-                            <span class="metric-value">42%</span>
-                            <span class="metric-label">More Customers Served</span>
+                    <div class="project-stats">
+                        <div class="stat-box">
+                            <span class="stat-value">42%</span>
+                            <span class="stat-label">More Customers</span>
                         </div>
-                        <div class="metric">
-                            <span class="metric-value">5.8%</span>
-                            <span class="metric-label">Default Rate</span>
+                        <div class="stat-box">
+                            <span class="stat-value">5.8%</span>
+                            <span class="stat-label">Default Rate</span>
                         </div>
-                        <div class="metric">
-                            <span class="metric-value">85%</span>
-                            <span class="metric-label">Accuracy Rate</span>
+                        <div class="stat-box">
+                            <span class="stat-value">85%</span>
+                            <span class="stat-label">Model Accuracy</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-tools">
+                        <h3>Tools & Technologies</h3>
+                        <div class="tools-tags">
+                            <span class="tool-tag">Python</span>
+                            <span class="tool-tag">Machine Learning</span>
+                            <span class="tool-tag">Pandas</span>
+                            <span class="tool-tag">Scikit-learn</span>
+                            <span class="tool-tag">Streamlit</span>
                         </div>
                     </div>
                     
                     <div class="project-links">
-                        <a href="https://ghana-fintech-credit-scoring-test-run.streamlit.app/" target="_blank" class="btn btn-primary">
+                        <a href="https://ghana-fintech-credit-scoring-test-run.streamlit.app/" target="_blank" class="btn btn-primary" style="margin-top: 1rem;">
                             <i class="fas fa-external-link-alt"></i> View Live Demo
                         </a>
                     </div>
                 </div>
                 
                 <div class="project-visual">
-                    <div class="tool-tags">
-                        <span class="tool-tag">Python</span>
-                        <span class="tool-tag">Machine Learning</span>
-                        <span class="tool-tag">Streamlit</span>
-                    </div>
-                    
-                    <div class="project-image" onclick="openModal('assets/images/fintech-dashboard-1.png')">
+                    <div class="project-image-container" onclick="openModal('assets/images/fintech-dashboard-1.png')">
                         <img src="assets/images/fintech-dashboard-1.png" alt="FinTech Credit Scoring Dashboard">
-                        <div class="image-caption">Click to view dashboard screenshot</div>
                     </div>
+                    <div class="image-caption">Main dashboard interface</div>
                     
-                    <!-- Gallery for additional images -->
-                    <div class="project-gallery">
-                        <img src="assets/images/fintech-dashboard-2.png" alt="Dashboard 2" onclick="openModal('assets/images/fintech-dashboard-2.png')">
-                        <img src="assets/images/fintech-dashboard-3.png" alt="Dashboard 3" onclick="openModal('assets/images/fintech-dashboard-3.png')">
-                        <img src="assets/images/fintech-dashboard-1.png" alt="Dashboard 1" onclick="openModal('assets/images/fintech-dashboard-1.png')">
-                    </div>
-                    
-                    <div class="project-actions">
-                        <a href="#bookstore" class="btn btn-secondary">
-                            <i class="fas fa-arrow-up"></i> Previous Project
-                        </a>
-                        <a href="#assembly" class="btn btn-secondary">
-                            <i class="fas fa-arrow-down"></i> Next Project
-                        </a>
+                    <div class="image-gallery">
+                        <div class="gallery-item" onclick="openModal('assets/images/fintech-dashboard-2.png')">
+                            <img src="assets/images/fintech-dashboard-2.png" alt="Dashboard View 2">
+                        </div>
+                        <div class="gallery-item" onclick="openModal('assets/images/fintech-dashboard-3.png')">
+                            <img src="assets/images/fintech-dashboard-3.png" alt="Dashboard View 3">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+            
+            <div class="project-navigation">
+                <a href="#bookstore" class="nav-btn">
+                    <i class="fas fa-arrow-up"></i> Previous Project
+                </a>
+                <a href="#assembly" class="nav-btn">
+                    <i class="fas fa-arrow-down"></i> Next Project
+                </a>
+            </div>
+        </section>
 
-    <!-- Project 3: Assembly Line Analysis -->
-    <section id="assembly" class="project-detail">
-        <div class="container">
+        <!-- Project 3: Assembly Line Analysis -->
+        <section id="assembly" class="project-card-full">
+            <div class="project-meta">
+                <span class="project-category">Operations Analytics</span>
+                <span class="project-year">2024</span>
+            </div>
+            
             <div class="project-header">
-                <div class="project-meta">
-                    <span class="project-category">Operations Analytics</span>
-                    <span class="project-date">2024</span>
-                </div>
-                <h2 class="project-title">Daikibo Assembly Line Analysis</h2>
-                <p class="project-role"><i class="fas fa-user-tie"></i> Lead Analyst</p>
+                <h2 class="project-title">Assembly Line Analysis</h2>
+                <p class="project-role">
+                    <i class="fas fa-user-tie"></i> Lead Analyst
+                </p>
             </div>
             
             <div class="project-content">
-                <div class="project-description">
+                <div class="project-details">
                     <h3>Project Overview</h3>
                     <p>Analyzed production and assembly line records to generate insights that help expedite repairs and plan operations for the company's growth. The project involved comprehensive data analysis to identify bottlenecks, optimize workflows, and improve overall production efficiency.</p>
                     
                     <h3>Key Analysis Areas</h3>
                     <ul>
-                        <li>Production line efficiency analysis</li>
-                        <li>Bottleneck identification and resolution</li>
+                        <li>Production line efficiency and bottleneck analysis</li>
                         <li>Maintenance scheduling optimization</li>
                         <li>Quality control metrics development</li>
                         <li>Production forecasting models</li>
+                        <li>Cost analysis and reduction strategies</li>
                     </ul>
                     
-                    <h3>Tools & Technologies</h3>
-                    <p><strong>Primary Tools:</strong> Microsoft Excel, Tableau</p>
-                    <p><strong>Analysis Methods:</strong> Statistical Analysis, Trend Analysis, Predictive Modeling</p>
-                    
                     <h3>Operational Impact</h3>
-                    <div class="impact-metrics">
-                        <div class="metric">
-                            <span class="metric-value">18%</span>
-                            <span class="metric-label">Faster Repairs</span>
+                    <div class="project-stats">
+                        <div class="stat-box">
+                            <span class="stat-value">18%</span>
+                            <span class="stat-label">Faster Repairs</span>
                         </div>
-                        <div class="metric">
-                            <span class="metric-value">12%</span>
-                            <span class="metric-label">Production Increase</span>
+                        <div class="stat-box">
+                            <span class="stat-value">12%</span>
+                            <span class="stat-label">Production Increase</span>
                         </div>
-                        <div class="metric">
-                            <span class="metric-value">25%</span>
-                            <span class="metric-label">Cost Reduction</span>
+                        <div class="stat-box">
+                            <span class="stat-value">25%</span>
+                            <span class="stat-label">Cost Reduction</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-tools">
+                        <h3>Tools & Technologies</h3>
+                        <div class="tools-tags">
+                            <span class="tool-tag">Tableau</span>
+                            <span class="tool-tag">Excel</span>
+                            <span class="tool-tag">Data Analysis</span>
+                            <span class="tool-tag">Operations Research</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="project-visual">
-                    <div class="tool-tags">
-                        <span class="tool-tag">Tableau</span>
-                        <span class="tool-tag">Excel</span>
-                        <span class="tool-tag">Operations Analytics</span>
+                    <div class="project-image-container" onclick="openModal('assets/images/Assembly Line Insights.png')">
+                        <img src="assets/images/Assembly Line Insights.png" alt="Assembly Line Analysis Dashboard">
                     </div>
-                    
-                    <div class="project-image" onclick="openModal('assets/images/Assembly Line Insights.png')">
-                        <img src="assets/images/Assembly Line Insights.png" alt="Daikibo Assembly Line Analysis Dashboard">
-                        <div class="image-caption">Click to view full dashboard</div>
-                    </div>
-                    
-                    <div class="project-actions">
-                        <a href="#fintech" class="btn btn-secondary">
-                            <i class="fas fa-arrow-up"></i> Previous Project
-                        </a>
-                        <a href="#" class="btn btn-secondary back-to-top-btn">
-                            <i class="fas fa-arrow-up"></i> Back to Top
-                        </a>
-                    </div>
+                    <div class="image-caption">Production efficiency dashboard</div>
                 </div>
             </div>
-        </div>
-    </section>
+            
+            <div class="project-navigation">
+                <a href="#fintech" class="nav-btn">
+                    <i class="fas fa-arrow-up"></i> Previous Project
+                </a>
+                <a href="#" class="nav-btn back-to-top-btn">
+                    <i class="fas fa-arrow-up"></i> Back to Top
+                </a>
+            </div>
+        </section>
+    </div>
 
     <!-- Image Modal -->
-    <div id="imageModal" class="modal">
+    <div id="imageModal" class="modal" onclick="closeModal()">
         <span class="close-modal" onclick="closeModal()">&times;</span>
         <img class="modal-content" id="modalImage">
     </div>
@@ -294,6 +593,68 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script src="assets/js/main.js"></script>
+    <script>
+        // Image Modal Functionality
+        function openModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            
+            modal.style.display = 'flex';
+            modalImg.src = imageSrc;
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside the image
+        document.addEventListener('click', function(e) {
+            const modal = document.getElementById('imageModal');
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Back to Top Functionality
+        const backToTopBtn = document.getElementById('backToTop');
+        if (backToTopBtn) {
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.style.display = 'flex';
+                } else {
+                    backToTopBtn.style.display = 'none';
+                }
+            });
+            
+            backToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // Mobile menu toggle (if not already in main.js)
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                menuToggle.querySelector('i').className = 
+                    navMenu.classList.contains('active') ? 'fas fa-times' : 'fas fa-bars';
+            });
+        }
+    </script>
 </body>
 </html>
