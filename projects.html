@@ -1,54 +1,126 @@
-<!-- projects.html -->
-<a href="index.html">Home</a>
-<a href="projects.html" class="active">Projects</a>
-</nav>
-</header>
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Kenneth Amankwah</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">K.A</span>
+                <span class="logo-sub">Data Analyst</span>
+            </a>
+            
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="projects.html" class="nav-link active"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="about.html" class="nav-link"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="index.html#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li>
+                    <button class="theme-toggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
+    <!-- Projects Header -->
+    <section class="projects-header">
+        <div class="container">
+            <h1 class="section-title">Data Analytics Projects</h1>
+            <p class="projects-subtitle">Explore my portfolio of data-driven projects showcasing analytical skills and business impact</p>
+        </div>
+    </section>
 
-<section class="section">
-<div class="project">
-<h3>📘 BookStore Insight Dashboard</h3>
-<p><strong>Role:</strong> Lead Analyst</p>
-<p>Developed a Power BI dashboard for bookstore inventory insights.
-Improved decision-making by identifying patterns in book sales & stock cycles.</p>
-<p><strong>Tools:</strong> Power BI</p>
-<img src="assets/images/bookstore.png" alt="Bookstore Dashboard" />
-</div>
+    <!-- Project 1: BookStore Insight -->
+    <section id="bookstore" class="project-detail">
+        <div class="container">
+            <div class="project-header">
+                <div class="project-meta">
+                    <span class="project-category">Business Intelligence</span>
+                    <span class="project-date">2024</span>
+                </div>
+                <h2 class="project-title">BookStore Insights Dashboard</h2>
+                <p class="project-role"><i class="fas fa-user-tie"></i> Lead Analyst</p>
+            </div>
+            
+            <div class="project-content">
+                <div class="project-description">
+                    <h3>Overview</h3>
+                    <p>Developed a comprehensive Power BI dashboard to provide bookstore management with real-time insights into inventory performance, sales trends, and customer preferences. The solution enables data-driven decision making for inventory optimization and sales strategy.</p>
+                    
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li>Real-time sales performance tracking</li>
+                        <li>Inventory turnover analysis</li>
+                        <li>Customer segmentation by purchase behavior</li>
+                        <li>Seasonal trend identification</li>
+                        <li>Profit margin analysis by category</li>
+                    </ul>
+                    
+                    <h3>Impact</h3>
+                    <div class="impact-metrics">
+                        <div class="metric">
+                            <span class="metric-value">15%</span>
+                            <span class="metric-label">Inventory Cost Reduction</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">22%</span>
+                            <span class="metric-label">Sales Increase</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">3 hours</span>
+                            <span class="metric-label">Weekly Time Saved</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-visual">
+                    <div class="tool-tags">
+                        <span class="tool-tag">Power BI</span>
+                        <span class="tool-tag">Excel</span>
+                        <span class="tool-tag">Data Modeling</span>
+                    </div>
+                    
+                    <div class="project-image">
+                        <img src="assets/images/BookStore Insights Dashboard.png" alt="BookStore Insight Dashboard">
+                        <div class="image-caption">Interactive Power BI Dashboard</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-
-<div class="project">
-<h3>🏭 Daikibo Assembly Line Optimization</h3>
-<p><strong>Role:</strong> Lead Analyst</p>
-<p>Analyzed production and assembly line data to optimize operational flow and
-reduce cycle delays. Used Excel for cleaning and Tableau for visualization.</p>
-<p><strong>Tools:</strong> Excel, Tableau</p>
-<img src="assets/images/assembly.png" alt="Assembly Dashboard" />
-</div>
-
-
-<div class="project">
-<h3>💳 Ghana FinTech Credit Scoring Model</h3>
-<p><strong>Role:</strong> Data Analyst</p>
-<p>Built a machine learning model using mobile money transactions, bill payments,
-and savings behavior to predict creditworthiness. Enabled up to 42% more
-customer approvals while maintaining risk controls.</p>
-<p><strong>Tools:</strong> Python (Pandas, Scikit-learn)</p>
-
-
-<div class="gallery">
-<img src="assets/images/fin1.png" />
-<img src="assets/images/fin2.png" />
-<img src="assets/images/fin3.png" />
-</div>
-
-
-<a class="btn" href="https://ghana-fintech-credit-scoring-test-run.streamlit.app/" target="_blank">View Demo</a>
-</div>
-</section>
-
-
-<footer>
-<p>© 2025 Kenneth Amankwah</p>
-</footer>
-</body>
-</html>
+    <!-- Project 2: FinTech Credit Scoring -->
+    <section id="fintech" class="project-detail alt-bg">
+        <div class="container">
+            <div class="project-header">
+                <div class="project-meta">
+                    <span class="project-category">Machine Learning</span>
+                    <span class="project-date">2024</span>
+                </div>
+                <h2 class="project-title">Ghana FinTech Credit Scoring System</h2>
+                <p class="project-role"><i class="fas fa-user-tie"></i> Data Analyst</p>
+            </div>
+            
+            <div class="project-content">
+                <div class="project-description">
+                    <h3>Challenge</h3>
+                    <p>Develop an alternative credit scoring model for Ghana's informal sector where traditional credit history is unavailable, enabling financial inclusion while maintaining sustainable risk levels.</p>
+                    
+                    <h3>Solution</h3>
+                    <p>Built a machine learning model using Python that analyzes synthetic data reflecting real-world patterns: mobile money transactions, bill payment history, and savings behavior to predict credit risk.</p>
+                    
+                    <h3>Technical Implementation</h3>

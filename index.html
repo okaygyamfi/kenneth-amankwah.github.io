@@ -1,61 +1,184 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Kenneth Amankwah | Data Analyst</title>
-<link rel="stylesheet" href="assets/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenneth Amankwah | Data Analyst Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Code+Pro:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-<header class="hero">
-<h1>Kenneth Amankwah</h1>
-<p class="subtitle">Data Analyst | Python • SQL • BI</p>
-<nav>
-<a href="index.html" class="active">Home</a>
-<a href="projects.html">Projects</a>
-<a href="#contact">Contact</a>
-<a href="assets/docs/KENNETH_AMANKWAH_CV_NEW.pdf" download>CV</a>
-</nav>
-</header>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">K.A</span>
+                <span class="logo-sub">Data Analyst</span>
+            </a>
+            
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="projects.html" class="nav-link"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="about.html" class="nav-link"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li>
+                    <button class="theme-toggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-text">
+                <h1 class="hero-title">Turning Data Into <span class="highlight">Actionable Insights</span></h1>
+                <p class="hero-subtitle">I'm Kenneth Amankwah, a Data Analyst passionate about transforming complex data into clear, impactful stories that drive business growth and innovation.</p>
+                <div class="hero-buttons">
+                    <a href="projects.html" class="btn btn-primary">
+                        <i class="fas fa-chart-line"></i> View My Work
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-paper-plane"></i> Get In Touch
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="data-visual">
+                    <div class="chart-bar" style="height: 60%;" data-tooltip="Python"></div>
+                    <div class="chart-bar" style="height: 85%;" data-tooltip="SQL"></div>
+                    <div class="chart-bar" style="height: 75%;" data-tooltip="Power BI"></div>
+                    <div class="chart-bar" style="height: 70%;" data-tooltip="Tableau"></div>
+                    <div class="chart-bar" style="height: 65%;" data-tooltip="Excel"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="about section">
-<h2>About Me</h2>
-<p>
-I am a data analyst passionate about using data to drive real business outcomes.
-My work focuses on analytics, dashboarding, and predictive modeling using
-Python, SQL, Power BI, Tableau, and Excel. I bring a hands-on problem-solving
-approach and experience from real projects across fintech, retail, and operations.
-</p>
-</section>
+    <!-- Skills Overview -->
+    <section class="skills-section">
+        <div class="container">
+            <h2 class="section-title">Core Competencies</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Data Analysis</h3>
+                    <p>Python (Pandas, NumPy), SQL, Statistical Analysis, Data Cleaning & Wrangling</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Data Visualization</h3>
+                    <p>Power BI, Tableau, Matplotlib, Seaborn, Interactive Dashboards</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Business Intelligence</h3>
+                    <p>KPI Development, Performance Metrics, Data-Driven Decision Making</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Tools & Technologies</h3>
+                    <p>Advanced Excel, Git, Adobe Creative Suite, Streamlit</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Featured Projects -->
+    <section class="projects-preview">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-tag">Power BI</div>
+                    <h3>BookStore Insights</h3>
+                    <p>Interactive dashboard providing key metrics for data-driven bookstore management decisions.</p>
+                    <a href="projects.html#bookstore" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-tag">Python & ML</div>
+                    <h3>FinTech Credit Scoring</h3>
+                    <p>Alternative credit scoring model serving 42% more customers with 5.8% default rate.</p>
+                    <a href="projects.html#fintech" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-tag">Tableau & Excel</div>
+                    <h3>Assembly Line Analysis</h3>
+                    <p>Production optimization insights to expedite repairs and plan growth operations.</p>
+                    <a href="projects.html#assembly" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="projects.html" class="btn btn-outline">
+                    <i class="fas fa-folder-open"></i> View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
 
-<section class="skills section">
-<h2>Skills</h2>
-<div class="grid">
-<div class="card">Python</div>
-<div class="card">SQL</div>
-<div class="card">Power BI</div>
-<div class="card">Tableau</div>
-<div class="card">Pandas</div>
-<div class="card">Excel (Advanced)</div>
-<div class="card">Machine Learning</div>
-<div class="card">Data Cleaning & Wrangling</div>
-</div>
-</section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <a href="mailto:nanagyamfiii233@gmail.com">nanagyamfiii233@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <div>
+                            <h3>Resume</h3>
+                            <a href="assets/docs/YOUR_NEW_CV.pdf" download class="btn-download">
+                                <i class="fas fa-download"></i> Download Updated CV
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-links">
+                    <a href="https://www.linkedin.com/in/kenneth-amankwah-0990a124a/" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/okaygyamfi" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://ghana-fintech-credit-scoring-test-run.streamlit.app/" target="_blank" class="social-link">
+                        <i class="fas fa-external-link-alt"></i> Live Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Kenneth Amankwah. All rights reserved.</p>
+            <p class="footer-note">Built with ❤️ using GitHub Codespaces & GitHub Pages</p>
+        </div>
+    </footer>
 
-<section id="contact" class="contact section">
-<h2>Contact</h2>
-<p>Email: <a href="mailto:nanagyamfiii233@gmail.com">nanagyamfiii233@gmail.com</a></p>
-<p>LinkedIn: <a href="https://www.linkedin.com/in/kenneth-amankwah-0990a124a/" target="_blank">Visit Profile</a></p>
-<p>GitHub: <a href="https://github.com/okaygyamfi" target="_blank">View GitHub</a></p>
-</section>
-
-
-<footer>
-<p>© 2025 Kenneth Amankwah</p>
-</footer>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
