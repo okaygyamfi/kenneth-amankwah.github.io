@@ -1446,4 +1446,136 @@ h1, h2, h3, h4 {
 
 .chart-bar-fill {
     animation: chartFill 1.5s ease-out forwards;
+/* ... your existing CSS ... */
+
+/* ▼▼▼ ADD SKILLS CHART CSS HERE ▼▼▼ */
+
+/* Skills Chart Styles */
+.skills-chart-container {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    max-width: 450px;
+    margin: 0 auto;
 }
+
+.chart-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.skills-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.chart-bar {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.skill-label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-color);
+    text-align: right;
+}
+
+.bar-container {
+    height: 24px;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 12px;
+    width: 0;
+    transition: width 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.bar-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.chart-legend {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+}
+
+.legend-item span {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+@media (max-width: 768px) {
+    .skills-chart-container {
+        margin-top: 2rem;
+        max-width: 100%;
+        padding: 1.5rem;
+    }
+    
+    .chart-bar {
+        grid-template-columns: 80px 1fr;
+        gap: 0.75rem;
+    }
+    
+    .skill-label {
+        font-size: 0.9rem;
+    }
+    
+    .bar-container {
+        height: 20px;
+    }
+}
+/* ▲▲▲ END OF SKILLS CHART CSS ▲▲▲ */}

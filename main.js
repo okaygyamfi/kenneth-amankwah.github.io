@@ -142,4 +142,62 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize any other components
     console.log('Portfolio website initialized successfully!');
+// ▼▼▼ ADD THIS TO THE END OF YOUR main.js FILE ▼▼▼
+
+// Skills Chart Animation
+function initSkillsChart() {
+    const chartBars = document.querySelectorAll('.chart-bar');
+    
+    if (chartBars.length === 0) return;
+    
+    // Animate chart bars on scroll
+    const animateChart = () => {
+        chartBars.forEach(bar => {
+            const level = bar.getAttribute('data-level');
+            const fill = bar.querySelector('.bar-fill');
+            
+            if (fill) {
+                fill.style.width = `${level}%`;
+            }
+        });
+    };
+    
+    // Trigger animation when in view
+    const chartObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                setTimeout(animateChart, 300);
+                chartObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+    
+    const chartContainer = document.querySelector('.skills-chart-container');
+    if (chartContainer) {
+        chartObserver.observe(chartContainer);
+    }
+    
+    // Also animate on page load if chart is visible
+    if (chartContainer && isElementInViewport(chartContainer)) {
+        setTimeout(animateChart, 500);
+    }
+}
+
+// Helper function to check if element is in viewport
+function isElementInViewport(el) {
+    if (!el) return false;
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Initialize skills chart when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initSkillsChart();
 });
+
+// ▲▲▲ END OF SKILLS CHART JS ▲▲▲});
