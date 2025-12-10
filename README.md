@@ -40,6 +40,7 @@ Developed an alternative credit scoring model using Python and machine learning 
 **Email:** (nanagyamfiii233@gmail.com)  
 **LinkedIn:** (https://www.linkedin.com/in/kenneth-amankwah-0990a124a/)  
 **GitHub:** (https://github.com/okaygyamfi)
+**Portfolio:** (https://okaygyamfi.github.io/kenneth-amankwah.github.io/)
 
 ---
 
