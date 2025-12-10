@@ -330,19 +330,253 @@
             
             <!-- Quick Navigation -->
             <div class="quick-jump">
-                <a href="#bookstore" class="jump-link">
-                    <i class="fas fa-book"></i> BookStore Insight
-                </a>
-                <a href="#fintech" class="jump-link">
-                    <i class="fas fa-credit-card"></i> FinTech Credit Scoring
-                </a>
-                <a href="#assembly" class="jump-link">
-                    <i class="fas fa-industry"></i> Assembly Line Analysis
-                </a>
-            </div>
+    <a href="#gse" class="jump-link">
+        <i class="fas fa-chart-line"></i> GSE Analysis
+    </a>
+    <a href="#bookstore" class="jump-link">
+        <i class="fas fa-book"></i> BookStore Insight
+    </a>
+    <a href="#fintech" class="jump-link">
+        <i class="fas fa-credit-card"></i> FinTech Credit Scoring
+    </a>
+    <a href="#assembly" class="jump-link">
+        <i class="fas fa-industry"></i> Assembly Line Analysis
+    </a>
+</div>
         </header>
 
-        <!-- Project 1: BookStore Insight -->
+        <!-- Project 1: GSE Analysis -->
+<section id="gse" class="project-detail">
+    <div class="container">
+        <div class="project-header">
+            <div class="project-meta">
+                <span class="project-category">Financial Analytics</span>
+                <span class="project-year">2024</span>
+            </div>
+            <h2 class="project-title">Ghana Stock Exchange Performance & Risk Assessment</h2>
+            <p class="project-role"><i class="fas fa-chart-line"></i> Financial Data Analyst</p>
+        </div>
+        
+        <div class="project-content">
+            <div class="project-details">
+                <h3>Executive Summary</h3>
+                <p>A comprehensive evaluation of the Ghana Stock Exchange (GSE) investment landscape using trading data from 2021–2023. This analysis moves beyond simple price tracking to assess true stock quality based on risk-adjusted returns, hidden trading costs (liquidity), and the reliability of price movements.</p>
+                
+                <p>The analysis revealed a highly fragmented market where Benso Oil Palm Plantation Plc (BOPP) emerged as the most efficient stock (Sharpe Ratio: +3.06), while Trust Bank Limited (The Gambia) offered the best liquidity and most reliable price trends. Conversely, extreme illiquidity rendered several stocks functionally untradeable.</p>
+                
+                <h3>Key Performance Metrics</h3>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-title">Data Period</div>
+                        <div class="metric-value">2021-2023</div>
+                        <div class="metric-description">3 years of comprehensive trading data analysis</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-title">Stocks Analyzed</div>
+                        <div class="metric-value">25+</div>
+                        <div class="metric-description">Ghana Stock Exchange listed companies</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-title">Data Points</div>
+                        <div class="metric-value">18,000+</div>
+                        <div class="metric-description">Daily trading records processed</div>
+                    </div>
+                </div>
+                
+                <h3>Core Analysis Findings</h3>
+                
+                <h4>1. Risk-Adjusted Return (Sharpe Ratio)</h4>
+                <p>Identified stocks that maximize returns while minimizing volatility. Benso Oil Palm Plantation Plc (BOPP) demonstrated superior risk management with a Sharpe Ratio of +3.06.</p>
+                
+                <table class="company-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Company</th>
+                            <th>Sharpe Ratio</th>
+                            <th>Interpretation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>Benso Oil Palm Plantation (BOPP)</strong></td>
+                            <td>+3.06</td>
+                            <td>Superior risk management & efficiency</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Enterprise Group PLC (EGL)</td>
+                            <td>+2.69</td>
+                            <td>Highly efficient and stable performance</td>
+                        </tr>
+                        <tr>
+                            <td>...</td>
+                            <td>Unilever Ghana PLC (UNIL)</td>
+                            <td>-1.45</td>
+                            <td>High risk with negative returns</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h4>2. Liquidity Profile (Average Relative Spread)</h4>
+                <p>Measured hidden trading costs, revealing extreme illiquidity in several stocks while others offered excellent tradability.</p>
+                
+                <table class="company-table">
+                    <thead>
+                        <tr>
+                            <th>Liquidity</th>
+                            <th>Company</th>
+                            <th>Avg. Spread</th>
+                            <th>Tradability</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Most Liquid</td>
+                            <td><strong>Trust Bank Limited (TBL)</strong></td>
+                            <td>6.03%</td>
+                            <td>Excellent - minimal trading friction</td>
+                        </tr>
+                        <tr>
+                            <td>Good</td>
+                            <td>MTN Ghana (MTNGH)</td>
+                            <td>21.93%</td>
+                            <td>Reflects high market interest</td>
+                        </tr>
+                        <tr>
+                            <td>Least Liquid</td>
+                            <td>Digicut Production (DIGICUT)</td>
+                            <td>113.30%</td>
+                            <td>Functionally untradeable</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h4>3. Trading Conviction (Volume-Price Correlation)</h4>
+                <p>Assessed the reliability of price trends by measuring correlation with trading volume.</p>
+                
+                <table class="company-table">
+                    <thead>
+                        <tr>
+                            <th>Conviction</th>
+                            <th>Company</th>
+                            <th>Correlation</th>
+                            <th>Trend Reliability</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Highest</td>
+                            <td><strong>Trust Bank Limited (TBL)</strong></td>
+                            <td>+0.96</td>
+                            <td>Highly reliable - genuine fundamental changes</td>
+                        </tr>
+                        <tr>
+                            <td>Weak</td>
+                            <td>Guinness Ghana Breweries (GGBL)</td>
+                            <td>+0.15</td>
+                            <td>Weak positive relationship</td>
+                        </tr>
+                        <tr>
+                            <td>Noise-Driven</td>
+                            <td>Cocoa Processing Company (CPC)</td>
+                            <td>-0.22</td>
+                            <td>Random, unsupported price movements</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="warning-box">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Data Quality Warning</h4>
+                    <p>Analysis revealed severe data quality failures: extreme outliers (-6115% return, +17.48 correlation) due to data sparsity and missing trades. This highlights structural problems for investors relying on automated data feeds for illiquid stocks.</p>
+                </div>
+                
+                <h3>Methodology</h3>
+                <ul>
+                    <li>Cleaned and processed 18,000+ daily trading records</li>
+                    <li>Calculated Sharpe Ratios for risk-adjusted performance</li>
+                    <li>Computed Average Relative Spreads for liquidity assessment</li>
+                    <li>Analyzed Volume-Price Correlations for trend reliability</li>
+                    <li>Used Python for statistical analysis and data validation</li>
+                </ul>
+                
+                <h3>Strategic Recommendations</h3>
+                <div class="recommendations-grid">
+                    <div class="recommendation-card">
+                        <h4><i class="fas fa-user-tie"></i> For Investment Managers</h4>
+                        <ul>
+                            <li>Prioritize stocks with high Sharpe Ratios (BOPP, EGL)</li>
+                            <li>Focus on liquid stocks (TBL, MTNGH) for portfolio efficiency</li>
+                            <li>Use Volume-Price Correlation to validate investment decisions</li>
+                            <li>Exit positions with spreads above 50%</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="recommendation-card">
+                        <h4><i class="fas fa-balance-scale"></i> For Regulators</h4>
+                        <ul>
+                            <li>Conduct data integrity audit for extreme outliers</li>
+                            <li>Address structural illiquidity of problematic stocks</li>
+                            <li>Consider different trading tiers for illiquid stocks</li>
+                            <li>Implement delisting policies for consistently untradeable stocks</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="project-tools">
+                    <h3>Tools & Technologies</h3>
+                    <div class="tools-tags">
+                        <span class="tool-tag">Python</span>
+                        <span class="tool-tag">Pandas</span>
+                        <span class="tool-tag">Financial Analytics</span>
+                        <span class="tool-tag">Statistical Analysis</span>
+                        <span class="tool-tag">Excel</span>
+                        <span class="tool-tag">Data Visualization</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-visual">
+                <div class="tool-tags">
+                    <span class="tool-tag">Financial Research</span>
+                    <span class="tool-tag">Risk Assessment</span>
+                    <span class="tool-tag">Market Analysis</span>
+                </div>
+                
+                <div class="project-image-container" onclick="openModal('assets/images/gse-dashboard.png')">
+                    <img src="assets/images/gse-dashboard.png" alt="GSE Performance Dashboard">
+                </div>
+                <div class="image-caption">Click image to view full dashboard</div>
+                
+                <div class="project-impact">
+                    <h4>Business Impact</h4>
+                    <ul>
+                        <li>Identified most efficient stocks for portfolio allocation</li>
+                        <li>Revealed critical illiquidity issues in 30% of analyzed stocks</li>
+                        <li>Provided actionable insights for both investors and regulators</li>
+                        <li>Established framework for ongoing GSE performance monitoring</li>
+                    </ul>
+                </div>
+                
+                <div class="project-actions">
+                    <a href="#fintech" class="btn btn-secondary">
+                        <i class="fas fa-arrow-down"></i> Next Project
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add this right before </section> of the GSE project -->
+<div class="project-navigation">
+    <a href="#bookstore" class="nav-btn">
+        <i class="fas fa-arrow-down"></i> Next Project
+    </a>
+</div>
+</section>
+
+
+        <!-- Project 2: BookStore Insight -->
         <section id="bookstore" class="project-card-full">
             <div class="project-meta">
                 <span class="project-category">Business Intelligence</span>
@@ -406,13 +640,15 @@
             </div>
             
             <div class="project-navigation">
-                <a href="#fintech" class="nav-btn">
-                    <i class="fas fa-arrow-down"></i> Next Project
-                </a>
-            </div>
-        </section>
+    <a href="#gse" class="nav-btn">
+        <i class="fas fa-arrow-up"></i> Previous Project
+    </a>
+    <a href="#fintech" class="nav-btn">
+        <i class="fas fa-arrow-down"></i> Next Project
+    </a>
+</div>
 
-        <!-- Project 2: FinTech Credit Scoring -->
+        <!-- Project 3: FinTech Credit Scoring -->
         <section id="fintech" class="project-card-full">
             <div class="project-meta">
                 <span class="project-category">Machine Learning</span>
@@ -499,9 +735,17 @@
                     <i class="fas fa-arrow-down"></i> Next Project
                 </a>
             </div>
+            <div class="project-navigation">
+    <a href="#bookstore" class="nav-btn">
+        <i class="fas fa-arrow-up"></i> Previous Project
+    </a>
+    <a href="#assembly" class="nav-btn">
+        <i class="fas fa-arrow-down"></i> Next Project
+    </a>
+</div>
         </section>
 
-        <!-- Project 3: Assembly Line Analysis -->
+        <!-- Project 4: Assembly Line Analysis -->
         <section id="assembly" class="project-card-full">
             <div class="project-meta">
                 <span class="project-category">Operations Analytics</span>
@@ -572,6 +816,15 @@
                     <i class="fas fa-arrow-up"></i> Back to Top
                 </a>
             </div>
+            <!-- Add this right before </section> of the Assembly Line project -->
+<div class="project-navigation">
+    <a href="#fintech" class="nav-btn">
+        <i class="fas fa-arrow-up"></i> Previous Project
+    </a>
+    <a href="#gse" class="nav-btn back-to-top-btn">
+        <i class="fas fa-arrow-up"></i> Back to Top
+    </a>
+</div>
         </section>
     </div>
 
