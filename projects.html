@@ -330,6 +330,9 @@
             
             <!-- Quick Navigation -->
             <div class="quick-jump">
+    <a href="#treasury" class="jump-link">
+        <i class="fas fa-money-bill-trend-up"></i> Treasury Analysis
+    </a>
     <a href="#gse" class="jump-link">
         <i class="fas fa-chart-line"></i> GSE Analysis
     </a>
@@ -345,7 +348,134 @@
 </div>
         </header>
 
-        <!-- Project 1: GSE Analysis -->
+
+        <!-- Project 1: Treasury Market Analysis -->
+<section id="treasury" class="project-detail">
+    <div class="container">
+        <div class="project-header">
+            <div class="project-meta">
+                <span class="project-category">Financial Analytics</span>
+                <span class="project-year">2025</span>
+            </div>
+            <h2 class="project-title">Ghana Treasury Market Analysis (2021–2025)</h2>
+            <p class="project-role"><i class="fas fa-chart-line"></i> Financial Data Analyst</p>
+        </div>
+        
+        <div class="project-content">
+            <div class="project-details">
+                <h3>Project Overview</h3>
+                <p>End-to-end data analysis of Bank of Ghana's Treasury Bill (T-Bill) issuances from January 2021 to September 2025. Leveraging Python for data engineering and Power BI for financial modeling to uncover critical trends in interest rates, yield spreads, and market volatility during a historic period of economic adjustment in Ghana.</p>
+                
+                <h3>Key Insights & Findings</h3>
+                
+                <h4>1. The Yield Hierarchy</h4>
+                <ul>
+                    <li><strong>Dominant Asset:</strong> 364-Day Bill emerged as the most lucrative short-term instrument (Average: <strong>25.1%</strong>)</li>
+                    <li><strong>Risk Premium:</strong> Clear yield curve with <strong>3.7% premium</strong> for 1-year commitments over 3-month holdings</li>
+                </ul>
+                
+                <h4>2. Market Stress & Spread Analysis</h4>
+                <ul>
+                    <li><strong>Peak Stress (2023):</strong> Yield spread reached <strong>4.5</strong> indicating extreme liquidity pressure</li>
+                    <li><strong>Stabilization (2025):</strong> Spread cooled to <strong>1.8</strong> suggesting macroeconomic normalcy</li>
+                </ul>
+                
+                <h4>3. The "December Effect" (Seasonality)</h4>
+                <ul>
+                    <li><strong>Optimal Entry:</strong> December offers highest average rates (<strong>27.40%</strong>)</li>
+                    <li><strong>Fiscal Cycle:</strong> Yields consistently ramp up in Q4 (Oct–Dec) due to end-of-year government budgetary pressures</li>
+                </ul>
+                
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-title">Data Period</div>
+                        <div class="metric-value">2021-2025</div>
+                        <div class="metric-description">4+ years of Treasury Bill data</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-title">Records Analyzed</div>
+                        <div class="metric-value">248</div>
+                        <div class="metric-description">Weekly T-Bill issuances</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-title">Data Accuracy</div>
+                        <div class="metric-value">100%</div>
+                        <div class="metric-description">Monday-tender audit verified</div>
+                    </div>
+                </div>
+                
+                <h3>Methodology & Data Engineering</h3>
+                <ul>
+                    <li>Conducted Monday-tender audit confirming 100% alignment with Bank of Ghana's weekly issuance cycle</li>
+                    <li>Engineered custom features: Asset Class Mapping, Time Intelligence, Spread Metrics</li>
+                    <li>Calculated "Wait Bonus" (364-Day vs 91-Day) to track investor risk appetite</li>
+                    <li>Identified chronological patterns revealing the "December Effect"</li>
+                </ul>
+                
+                <h3>Technical Implementation</h3>
+                <div class="project-tools">
+                    <h4>Tech Stack</h4>
+                    <div class="tools-tags">
+                        <span class="tool-tag">Python</span>
+                        <span class="tool-tag">Pandas</span>
+                        <span class="tool-tag">Power BI</span>
+                        <span class="tool-tag">DAX</span>
+                        <span class="tool-tag">VS Code</span>
+                        <span class="tool-tag">Jupyter</span>
+                        <span class="tool-tag">Financial Modeling</span>
+                    </div>
+                </div>
+                
+                <h3>Project Structure</h3>
+                <ul>
+                    <li><strong>Data/</strong>: Raw and processed CSV datasets</li>
+                    <li><strong>Notebooks/</strong>: Python scripts for data transformation and statistical auditing</li>
+                    <li><strong>Visualizations/</strong>: Power BI source files and dashboard exports</li>
+                    <li><strong>Report/</strong>: Formal PDF Executive Summary and Recommendations</li>
+                </ul>
+            </div>
+            
+            <div class="project-visual">
+                <div class="tool-tags">
+                    <span class="tool-tag">Treasury Bills</span>
+                    <span class="tool-tag">Yield Analysis</span>
+                    <span class="tool-tag">Market Stress</span>
+                </div>
+                
+                <div class="project-image-container" onclick="openModal('assets/images/Market_Overview_Dashboard.png')">
+                    <img src="assets/images/Market_Overview_Dashboard.png" alt="Market Overview Dashboard">
+                </div>
+                <div class="image-caption">Market Overview Dashboard - Click to view full size</div>
+                
+                <div class="image-gallery">
+                    <div class="gallery-item" onclick="openModal('assets/images/Market_Overview_Dashboard.png')">
+                        <img src="assets/images/Market_Overview_Dashboard.png" alt="Market Overview">
+                    </div>
+                    <div class="gallery-item" onclick="openModal('assets/images/Trend_Analysis_Dashboard.png')">
+                        <img src="assets/images/Trend_Analysis_Dashboard.png" alt="Trend Analysis">
+                    </div>
+                </div>
+                
+                <div class="project-impact">
+                    <h4>Business Impact</h4>
+                    <ul>
+                        <li>Identified optimal investment timing through seasonal pattern analysis</li>
+                        <li>Quantified market stress indicators for risk assessment</li>
+                        <li>Established yield hierarchy for portfolio optimization</li>
+                        <li>Provided data-driven insights for treasury investment decisions</li>
+                    </ul>
+                </div>
+                
+                <div class="project-actions">
+                    <a href="#gse" class="nav-btn">
+                        <i class="fas fa-arrow-down"></i> Next Project
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        <!-- Project 2: GSE Analysis -->
 <section id="gse" class="project-detail">
     <div class="container">
         <div class="project-header">
@@ -569,6 +699,9 @@
     </div>
     <!-- Add this right before </section> of the GSE project -->
 <div class="project-navigation">
+    <a href="#treasury" class="nav-btn">
+        <i class="fas fa-arrow-up"></i> Previous Project
+    </a>
     <a href="#bookstore" class="nav-btn">
         <i class="fas fa-arrow-down"></i> Next Project
     </a>
@@ -576,7 +709,7 @@
 </section>
 
 
-        <!-- Project 2: BookStore Insight -->
+        <!-- Project 3: BookStore Insight -->
         <section id="bookstore" class="project-card-full">
             <div class="project-meta">
                 <span class="project-category">Business Intelligence</span>
@@ -648,7 +781,7 @@
     </a>
 </div>
 
-        <!-- Project 3: FinTech Credit Scoring -->
+        <!-- Project 4: FinTech Credit Scoring -->
         <section id="fintech" class="project-card-full">
             <div class="project-meta">
                 <span class="project-category">Machine Learning</span>
@@ -745,7 +878,7 @@
 </div>
         </section>
 
-        <!-- Project 4: Assembly Line Analysis -->
+        <!-- Project 5: Assembly Line Analysis -->
         <section id="assembly" class="project-card-full">
             <div class="project-meta">
                 <span class="project-category">Operations Analytics</span>
@@ -809,13 +942,13 @@
             </div>
             
             <div class="project-navigation">
-                <a href="#fintech" class="nav-btn">
-                    <i class="fas fa-arrow-up"></i> Previous Project
-                </a>
-                <a href="#" class="nav-btn back-to-top-btn">
-                    <i class="fas fa-arrow-up"></i> Back to Top
-                </a>
-            </div>
+    <a href="#fintech" class="nav-btn">
+        <i class="fas fa-arrow-up"></i> Previous Project
+    </a>
+    <a href="#treasury" class="nav-btn back-to-top-btn">
+        <i class="fas fa-arrow-up"></i> Back to Top
+    </a>
+</div>
             <!-- Add this right before </section> of the Assembly Line project -->
 <div class="project-navigation">
     <a href="#fintech" class="nav-btn">
