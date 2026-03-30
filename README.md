@@ -23,6 +23,15 @@ My long-term interests include **financial markets, fintech regulation, financia
 
 ---
 
+### IGF Digitalization at Tema Metropolitan Assembly  
+**Role:** Financial Data Analyst
+
+Analyzed 8 years of IGF collection data and developed a phased digitalization roadmap automating revenue collection, billing, and processing, projecting 10.22% revenue growth for the Assembly.
+
+**Tools:** Excel, Power BI
+
+---
+
 ### Ghana FinTech Credit Scoring System
 **Role:** Financial Data Analyst  
 
