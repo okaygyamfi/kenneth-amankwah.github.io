@@ -1,1039 +1,208 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Kenneth Amankwah</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Projects page specific styles */
-        .projects-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem;
-        }
-        
-        .project-card-full {
-            background: var(--card-bg);
-            border-radius: var(--radius);
-            padding: 2rem;
-            margin-bottom: 3rem;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-color);
-        }
-        
-        .project-meta {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-        
-        .project-category {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            padding: 0.25rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-        
-        .project-year {
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-        
-        .project-header {
-            margin-bottom: 2rem;
-        }
-        
-        .project-title {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-color);
-        }
-        
-        .project-role {
-            color: var(--text-light);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .project-content {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2.5rem;
-        }
-        
-        @media (min-width: 768px) {
-            .project-content {
-                grid-template-columns: 2fr 1fr;
-            }
-        }
-        
-        .project-details h3 {
-            color: var(--primary-color);
-            margin: 1.5rem 0 1rem;
-            font-size: 1.25rem;
-        }
-        
-        .project-details h3:first-child {
-            margin-top: 0;
-        }
-        
-        .project-details p {
-            line-height: 1.7;
-            color: var(--text-color);
-            margin-bottom: 1rem;
-        }
-        
-        .project-details ul {
-            margin-left: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .project-details li {
-            margin-bottom: 0.5rem;
-            line-height: 1.6;
-        }
-        
-        .project-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-        
-        .stat-box {
-            text-align: center;
-            padding: 1rem;
-            background: var(--bg-secondary);
-            border-radius: var(--radius-sm);
-            border: 1px solid var(--border-color);
-        }
-        
-        .stat-value {
-            display: block;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 0.25rem;
-        }
-        
-        .stat-label {
-            display: block;
-            font-size: 0.85rem;
-            color: var(--text-light);
-        }
-        
-        .project-tools {
-            margin: 1.5rem 0;
-        }
-        
-        .tools-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 0.5rem;
-        }
-        
-        .tool-tag {
-            background: var(--bg-secondary);
-            color: var(--primary-color);
-            padding: 0.25rem 0.75rem;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-        
-        .project-visual {
-            margin-top: 1rem;
-        }
-        
-        .project-image-container {
-            border-radius: var(--radius-sm);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            margin-bottom: 1rem;
-            border: 1px solid var(--border-color);
-        }
-        
-        .project-image-container img {
-            width: 100%;
-            height: auto;
-            display: block;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        
-        .project-image-container img:hover {
-            transform: scale(1.02);
-        }
-        
-        .image-caption {
-            text-align: center;
-            font-size: 0.85rem;
-            color: var(--text-light);
-            margin-top: 0.5rem;
-        }
-        
-        .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 0.75rem;
-            margin-top: 1rem;
-        }
-        
-        .gallery-item {
-            border-radius: var(--radius-sm);
-            overflow: hidden;
-            cursor: pointer;
-            border: 1px solid var(--border-color);
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 120px;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-        
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-        
-        .project-navigation {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border-color);
-        }
-        
-        .nav-btn {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.5rem;
-            background: var(--bg-secondary);
-            color: var(--text-color);
-            text-decoration: none;
-            border-radius: var(--radius-sm);
-            font-weight: 500;
-            transition: var(--transition);
-            border: 1px solid var(--border-color);
-        }
-        
-        .nav-btn:hover {
-            background: var(--primary-color);
-            color: white;
-            transform: translateY(-2px);
-        }
-        
-        .quick-jump {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-        }
-        
-        .jump-link {
-            padding: 0.5rem 1rem;
-            background: var(--bg-secondary);
-            color: var(--text-color);
-            text-decoration: none;
-            border-radius: var(--radius-sm);
-            font-size: 0.9rem;
-            transition: var(--transition);
-            border: 1px solid var(--border-color);
-        }
-        
-        .jump-link:hover {
-            background: var(--primary-color);
-            color: white;
-        }
-        
-        /* Modal styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .modal-content {
-            max-width: 90%;
-            max-height: 90%;
-            object-fit: contain;
-        }
-        
-        .close-modal {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: white;
-            font-size: 40px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        
-        .close-modal:hover {
-            color: #ddd;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
+
     <nav class="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <span class="logo-text">Kenneth Amankwah</span>
-                <span class="logo-sub">Data Analyst</span>
-            </a>
-            
-            <button class="menu-toggle" aria-label="Toggle menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="projects.html" class="nav-link active"><i class="fas fa-project-diagram"></i> Projects</a></li>
-                <li><a href="about.html" class="nav-link"><i class="fas fa-user"></i> About</a></li>
-                <li><a href="index.html#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
-                <li>
-                    <button class="theme-toggle" aria-label="Toggle theme">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                </li>
+        <div class="container">
+            <a href="index.html" class="logo">KA<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Projects Header -->
-    <div class="projects-container">
-        <header class="projects-header">
-            <h1 style="font-size: 2.5rem; margin-bottom: 1rem; text-align: center;">Data Analytics Projects</h1>
-            <p style="text-align: center; color: var(--text-light); margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-                Showcasing data-driven solutions and analytical expertise in business intelligence, machine learning, and operations analytics.
-            </p>
-            
-            <!-- Quick Navigation -->
-            <div class="quick-jump">
-    <a href="#treasury" class="jump-link">
-        <i class="fas fa-money-bill-trend-up"></i> Treasury Analysis
-    </a>
-    <a href="#gse" class="jump-link">
-        <i class="fas fa-chart-line"></i> GSE Analysis
-    </a>
-    <a href="#bookstore" class="jump-link">
-        <i class="fas fa-book"></i> BookStore Insight
-    </a>
-    <a href="#fintech" class="jump-link">
-        <i class="fas fa-credit-card"></i> FinTech Credit Scoring
-    </a>
-    <a href="#assembly" class="jump-link">
-        <i class="fas fa-industry"></i> Assembly Line Analysis
-    </a>
-</div>
+    <div class="container project-page-container">
+        <header class="section-header">
+            <h1>Financial Data Portfolio</h1>
+            <p>A collection of projects spanning public sector fiscal policy, market analytics, and risk modeling.</p>
         </header>
 
-
-        <!-- Project 1: Treasury Market Analysis -->
-<section id="treasury" class="project-detail">
-    <div class="container">
-        <div class="project-header">
+        <section id="gse" class="project-card-full">
             <div class="project-meta">
-                <span class="project-category">Financial Analytics</span>
-                <span class="project-year">2025</span>
-            </div>
-            <h2 class="project-title">Ghana Treasury Market Analysis (2021–2025)</h2>
-            <p class="project-role"><i class="fas fa-chart-line"></i> Financial Data Analyst</p>
-        </div>
-        
-        <div class="project-content">
-            <div class="project-details">
-                <h3>Project Overview</h3>
-                <p>End-to-end data analysis of Bank of Ghana's Treasury Bill (T-Bill) issuances from January 2021 to September 2025. Leveraging Python for data engineering and Power BI for financial modeling to uncover critical trends in interest rates, yield spreads, and market volatility during a historic period of economic adjustment in Ghana.</p>
-                
-                <h3>Key Insights & Findings</h3>
-                
-                <h4>1. The Yield Hierarchy</h4>
-                <ul>
-                    <li><strong>Dominant Asset:</strong> 364-Day Bill emerged as the most lucrative short-term instrument (Average: <strong>25.1%</strong>)</li>
-                    <li><strong>Risk Premium:</strong> Clear yield curve with <strong>3.7% premium</strong> for 1-year commitments over 3-month holdings</li>
-                </ul>
-                
-                <h4>2. Market Stress & Spread Analysis</h4>
-                <ul>
-                    <li><strong>Peak Stress (2023):</strong> Yield spread reached <strong>4.5</strong> indicating extreme liquidity pressure</li>
-                    <li><strong>Stabilization (2025):</strong> Spread cooled to <strong>1.8</strong> suggesting macroeconomic normalcy</li>
-                </ul>
-                
-                <h4>3. The "December Effect" (Seasonality)</h4>
-                <ul>
-                    <li><strong>Optimal Entry:</strong> December offers highest average rates (<strong>27.40%</strong>)</li>
-                    <li><strong>Fiscal Cycle:</strong> Yields consistently ramp up in Q4 (Oct–Dec) due to end-of-year government budgetary pressures</li>
-                </ul>
-                
-                <div class="metrics-grid">
-                    <div class="metric-card">
-                        <div class="metric-title">Data Period</div>
-                        <div class="metric-value">2021-2025</div>
-                        <div class="metric-description">4+ years of Treasury Bill data</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-title">Records Analyzed</div>
-                        <div class="metric-value">248</div>
-                        <div class="metric-description">Weekly T-Bill issuances</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-title">Data Accuracy</div>
-                        <div class="metric-value">100%</div>
-                        <div class="metric-description">Monday-tender audit verified</div>
-                    </div>
-                </div>
-                
-                <h3>Methodology & Data Engineering</h3>
-                <ul>
-                    <li>Conducted Monday-tender audit confirming 100% alignment with Bank of Ghana's weekly issuance cycle</li>
-                    <li>Engineered custom features: Asset Class Mapping, Time Intelligence, Spread Metrics</li>
-                    <li>Calculated "Wait Bonus" (364-Day vs 91-Day) to track investor risk appetite</li>
-                    <li>Identified chronological patterns revealing the "December Effect"</li>
-                </ul>
-                
-                <h3>Technical Implementation</h3>
-                <div class="project-tools">
-                    <h4>Tech Stack</h4>
-                    <div class="tools-tags">
-                        <span class="tool-tag">Python</span>
-                        <span class="tool-tag">Pandas</span>
-                        <span class="tool-tag">Power BI</span>
-                        <span class="tool-tag">DAX</span>
-                        <span class="tool-tag">VS Code</span>
-                        <span class="tool-tag">Jupyter</span>
-                        <span class="tool-tag">Financial Modeling</span>
-                    </div>
-                </div>
-                
-                
-            
-            <div class="project-visual">
-                <div class="tool-tags">
-                    <span class="tool-tag">Treasury Bills</span>
-                    <span class="tool-tag">Yield Analysis</span>
-                    <span class="tool-tag">Market Stress</span>
-                </div>
-                
-                <div class="project-image-container" onclick="openModal('assets/images/Market_Overview_Dashboard.png')">
-                    <img src="assets/images/Market_Overview_Dashboard.png" alt="Market Overview Dashboard">
-                </div>
-                <div class="image-caption">Market Overview Dashboard - Click to view full size</div>
-                
-                <div class="image-gallery">
-                    <div class="gallery-item" onclick="openModal('assets/images/Market_Overview_Dashboard.png')">
-                        <img src="assets/images/Market_Overview_Dashboard.png" alt="Market Overview">
-                    </div>
-                    <div class="gallery-item" onclick="openModal('assets/images/Trend_Analysis_Dashboard.png')">
-                        <img src="assets/images/Trend_Analysis_Dashboard.png" alt="Trend Analysis">
-                    </div>
-                </div>
-                
-                <div class="project-impact">
-                    <h4>Business Impact</h4>
-                    <ul>
-                        <li>Identified optimal investment timing through seasonal pattern analysis</li>
-                        <li>Quantified market stress indicators for risk assessment</li>
-                        <li>Established yield hierarchy for portfolio optimization</li>
-                        <li>Provided data-driven insights for treasury investment decisions</li>
-                    </ul>
-                </div>
-                
-                <div class="project-actions">
-                    <a href="#gse" class="nav-btn">
-                        <i class="fas fa-arrow-down"></i> Next Project
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-        <!-- Project 2: GSE Analysis -->
-<section id="gse" class="project-detail">
-    <div class="container">
-        <div class="project-header">
-            <div class="project-meta">
-                <span class="project-category">Financial Analytics</span>
+                <span class="project-category">Market Analytics</span>
                 <span class="project-year">2024</span>
             </div>
-            <h2 class="project-title">Ghana Stock Exchange Performance & Risk Assessment</h2>
-            <p class="project-role"><i class="fas fa-chart-line"></i> Financial Data Analyst</p>
-        </div>
-        
-        <div class="project-content">
-            <div class="project-details">
-                <h3>Executive Summary</h3>
-                <p>A comprehensive evaluation of the Ghana Stock Exchange (GSE) investment landscape using trading data from 2021–2023. This analysis moves beyond simple price tracking to assess true stock quality based on risk-adjusted returns, hidden trading costs (liquidity), and the reliability of price movements.</p>
-                
-                <p>The analysis revealed a highly fragmented market where Benso Oil Palm Plantation Plc (BOPP) emerged as the most efficient stock (Sharpe Ratio: +3.06), while Trust Bank Limited (The Gambia) offered the best liquidity and most reliable price trends. Conversely, extreme illiquidity rendered several stocks functionally untradeable.</p>
-                
-                <h3>Key Performance Metrics</h3>
-                <div class="metrics-grid">
-                    <div class="metric-card">
-                        <div class="metric-title">Data Period</div>
-                        <div class="metric-value">2021-2023</div>
-                        <div class="metric-description">3 years of comprehensive trading data analysis</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-title">Stocks Analyzed</div>
-                        <div class="metric-value">25+</div>
-                        <div class="metric-description">Ghana Stock Exchange listed companies</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-title">Data Points</div>
-                        <div class="metric-value">18,000+</div>
-                        <div class="metric-description">Daily trading records processed</div>
-                    </div>
-                </div>
-                
-                <h3>Core Analysis Findings</h3>
-                
-                <h4>1. Risk-Adjusted Return (Sharpe Ratio)</h4>
-                <p>Identified stocks that maximize returns while minimizing volatility. Benso Oil Palm Plantation Plc (BOPP) demonstrated superior risk management with a Sharpe Ratio of +3.06.</p>
-                
-                <table class="company-table">
-                    <thead>
-                        <tr>
-                            <th>Rank</th>
-                            <th>Company</th>
-                            <th>Sharpe Ratio</th>
-                            <th>Interpretation</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td><strong>Benso Oil Palm Plantation (BOPP)</strong></td>
-                            <td>+3.06</td>
-                            <td>Superior risk management & efficiency</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Enterprise Group PLC (EGL)</td>
-                            <td>+2.69</td>
-                            <td>Highly efficient and stable performance</td>
-                        </tr>
-                        <tr>
-                            <td>...</td>
-                            <td>Unilever Ghana PLC (UNIL)</td>
-                            <td>-1.45</td>
-                            <td>High risk with negative returns</td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-                <h4>2. Liquidity Profile (Average Relative Spread)</h4>
-                <p>Measured hidden trading costs, revealing extreme illiquidity in several stocks while others offered excellent tradability.</p>
-                
-                <table class="company-table">
-                    <thead>
-                        <tr>
-                            <th>Liquidity</th>
-                            <th>Company</th>
-                            <th>Avg. Spread</th>
-                            <th>Tradability</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Most Liquid</td>
-                            <td><strong>Trust Bank Limited (TBL)</strong></td>
-                            <td>6.03%</td>
-                            <td>Excellent - minimal trading friction</td>
-                        </tr>
-                        <tr>
-                            <td>Good</td>
-                            <td>MTN Ghana (MTNGH)</td>
-                            <td>21.93%</td>
-                            <td>Reflects high market interest</td>
-                        </tr>
-                        <tr>
-                            <td>Least Liquid</td>
-                            <td>Digicut Production (DIGICUT)</td>
-                            <td>113.30%</td>
-                            <td>Functionally untradeable</td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-                <h4>3. Trading Conviction (Volume-Price Correlation)</h4>
-                <p>Assessed the reliability of price trends by measuring correlation with trading volume.</p>
-                
-                <table class="company-table">
-                    <thead>
-                        <tr>
-                            <th>Conviction</th>
-                            <th>Company</th>
-                            <th>Correlation</th>
-                            <th>Trend Reliability</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Highest</td>
-                            <td><strong>Trust Bank Limited (TBL)</strong></td>
-                            <td>+0.96</td>
-                            <td>Highly reliable - genuine fundamental changes</td>
-                        </tr>
-                        <tr>
-                            <td>Weak</td>
-                            <td>Guinness Ghana Breweries (GGBL)</td>
-                            <td>+0.15</td>
-                            <td>Weak positive relationship</td>
-                        </tr>
-                        <tr>
-                            <td>Noise-Driven</td>
-                            <td>Cocoa Processing Company (CPC)</td>
-                            <td>-0.22</td>
-                            <td>Random, unsupported price movements</td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-                <div class="warning-box">
-                    <h4><i class="fas fa-exclamation-triangle"></i> Data Quality Warning</h4>
-                    <p>Analysis revealed severe data quality failures: extreme outliers (-6115% return, +17.48 correlation) due to data sparsity and missing trades. This highlights structural problems for investors relying on automated data feeds for illiquid stocks.</p>
-                </div>
-                
-                <h3>Methodology</h3>
-                <ul>
-                    <li>Cleaned and processed 18,000+ daily trading records</li>
-                    <li>Calculated Sharpe Ratios for risk-adjusted performance</li>
-                    <li>Computed Average Relative Spreads for liquidity assessment</li>
-                    <li>Analyzed Volume-Price Correlations for trend reliability</li>
-                    <li>Used Python for statistical analysis and data validation</li>
-                </ul>
-                
-                <h3>Strategic Recommendations</h3>
-                <div class="recommendations-grid">
-                    <div class="recommendation-card">
-                        <h4><i class="fas fa-user-tie"></i> For Investment Managers</h4>
-                        <ul>
-                            <li>Prioritize stocks with high Sharpe Ratios (BOPP, EGL)</li>
-                            <li>Focus on liquid stocks (TBL, MTNGH) for portfolio efficiency</li>
-                            <li>Use Volume-Price Correlation to validate investment decisions</li>
-                            <li>Exit positions with spreads above 50%</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="recommendation-card">
-                        <h4><i class="fas fa-balance-scale"></i> For Regulators</h4>
-                        <ul>
-                            <li>Conduct data integrity audit for extreme outliers</li>
-                            <li>Address structural illiquidity of problematic stocks</li>
-                            <li>Consider different trading tiers for illiquid stocks</li>
-                            <li>Implement delisting policies for consistently untradeable stocks</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="project-tools">
-                    <h3>Tools & Technologies</h3>
-                    <div class="tools-tags">
+            <div class="project-header">
+                <h2 class="project-title">GSE Market Performance Analysis</h2>
+                <p class="project-role"><i class="fas fa-user-tie"></i> Data Analyst</p>
+            </div>
+            <div class="project-content">
+                <div class="project-details">
+                    <h3>Project Challenge</h3>
+                    <p>Analyzing historical trends and liquidity on the Ghana Stock Exchange to provide insights for institutional investors.</p>
+                    <div class="project-tools">
                         <span class="tool-tag">Python</span>
-                        <span class="tool-tag">Pandas</span>
-                        <span class="tool-tag">Financial Analytics</span>
-                        <span class="tool-tag">Statistical Analysis</span>
-                        <span class="tool-tag">Excel</span>
-                        <span class="tool-tag">Data Visualization</span>
+                        <span class="tool-tag">SQL</span>
+                        <span class="tool-tag">Tableau</span>
+                    </div>
+                </div>
+                <div class="project-visual">
+                    <div class="project-image-container" onclick="openModal('assets/images/gse-dashboard.png')">
+                        <img src="assets/images/gse-dashboard.png" alt="GSE Dashboard">
                     </div>
                 </div>
             </div>
-            
-            <div class="project-visual">
-                <div class="tool-tags">
-                    <span class="tool-tag">Financial Research</span>
-                    <span class="tool-tag">Risk Assessment</span>
-                    <span class="tool-tag">Market Analysis</span>
-                </div>
-                
-                <div class="project-image-container" onclick="openModal('assets/images/gse-dashboard.png')">
-                    <img src="assets/images/gse-dashboard.png" alt="GSE Performance Dashboard">
-                </div>
-                <div class="image-caption">Click image to view full dashboard</div>
-                
-                <div class="project-impact">
-                    <h4>Business Impact</h4>
-                    <ul>
-                        <li>Identified most efficient stocks for portfolio allocation</li>
-                        <li>Revealed critical illiquidity issues in 30% of analyzed stocks</li>
-                        <li>Provided actionable insights for both investors and regulators</li>
-                        <li>Established framework for ongoing GSE performance monitoring</li>
-                    </ul>
-                </div>
-                
-                <div class="project-actions">
-                    <a href="#fintech" class="btn btn-secondary">
-                        <i class="fas fa-arrow-down"></i> Next Project
-                    </a>
-                </div>
+            <div class="project-navigation">
+                <a href="#bookstore" class="nav-btn">Next Project <i class="fas fa-arrow-down"></i></a>
             </div>
-        </div>
-    </div>
-    <!-- Add this right before </section> of the GSE project -->
-<div class="project-navigation">
-    <a href="#treasury" class="nav-btn">
-        <i class="fas fa-arrow-up"></i> Previous Project
-    </a>
-    <a href="#bookstore" class="nav-btn">
-        <i class="fas fa-arrow-down"></i> Next Project
-    </a>
-</div>
-</section>
+        </section>
 
-
-        <!-- Project 3: BookStore Insight -->
         <section id="bookstore" class="project-card-full">
             <div class="project-meta">
                 <span class="project-category">Business Intelligence</span>
                 <span class="project-year">2024</span>
             </div>
-            
             <div class="project-header">
                 <h2 class="project-title">BookStore Insights Dashboard</h2>
-                <p class="project-role">
-                    <i class="fas fa-user-tie"></i> Lead Analyst
-                </p>
+                <p class="project-role"><i class="fas fa-user-tie"></i> Lead Analyst</p>
             </div>
-            
             <div class="project-content">
                 <div class="project-details">
                     <h3>Project Overview</h3>
-                    <p>Developed a comprehensive Power BI dashboard to provide bookstore management with real-time insights into inventory performance, sales trends, and customer preferences. The solution enables data-driven decision making for inventory optimization and sales strategy.</p>
-                    
-                    <h3>Key Responsibilities</h3>
-                    <ul>
-                        <li>Designed and developed an interactive Power BI dashboard with real-time metrics</li>
-                        <li>Analyzed sales data to identify top-performing books and categories</li>
-                        <li>Created inventory turnover metrics to optimize stock levels</li>
-                        <li>Implemented customer segmentation based on purchase patterns</li>
-                        <li>Developed sales trend analysis for accurate forecasting</li>
-                    </ul>
-                    
-                    <h3>Business Impact</h3>
-                    <div class="project-stats">
-                        <div class="stat-box">
-                            <span class="stat-value">22%</span>
-                            <span class="stat-label">Increase in Sales</span>
-                        </div>
-                        <div class="stat-box">
-                            <span class="stat-value">15%</span>
-                            <span class="stat-label">Cost Reduction</span>
-                        </div>
-                        <div class="stat-box">
-                            <span class="stat-value">3 hrs</span>
-                            <span class="stat-label">Time Saved/Week</span>
-                        </div>
-                    </div>
-                    
+                    <p>Optimization of retail inventory through sales trend analysis and customer segmentation.</p>
                     <div class="project-tools">
-                        <h3>Tools & Technologies</h3>
-                        <div class="tools-tags">
-                            <span class="tool-tag">Power BI</span>
-                            <span class="tool-tag">Excel</span>
-                            <span class="tool-tag">Data Visualization</span>
-                            <span class="tool-tag">Dashboard Design</span>
-                        </div>
+                        <span class="tool-tag">Excel</span>
+                        <span class="tool-tag">Power BI</span>
                     </div>
                 </div>
-                
                 <div class="project-visual">
                     <div class="project-image-container" onclick="openModal('assets/images/BookStore Insights Dashboard.png')">
-                        <img src="assets/images/BookStore Insights Dashboard.png" alt="BookStore Insights Dashboard">
-                    </div>
-                    <div class="image-caption">Click image to view full size</div>
-                </div>
-            </div>
-            
-            <div class="project-navigation">
-    <a href="#gse" class="nav-btn">
-        <i class="fas fa-arrow-up"></i> Previous Project
-    </a>
-    <a href="#fintech" class="nav-btn">
-        <i class="fas fa-arrow-down"></i> Next Project
-    </a>
-</div>
-
-        <!-- Project 4: FinTech Credit Scoring -->
-        <section id="fintech" class="project-card-full">
-            <div class="project-meta">
-                <span class="project-category">Machine Learning</span>
-                <span class="project-year">2024</span>
-            </div>
-            
-            <div class="project-header">
-                <h2 class="project-title">FinTech Credit Scoring System</h2>
-                <p class="project-role">
-                    <i class="fas fa-user-tie"></i> Data Analyst
-                </p>
-            </div>
-            
-            <div class="project-content">
-                <div class="project-details">
-                    <h3>Project Challenge</h3>
-                    <p>Developed an alternative credit scoring model for Ghana's informal sector where traditional credit history is unavailable, enabling financial inclusion while maintaining sustainable risk levels.</p>
-                    
-                    <h3>Technical Solution</h3>
-                    <ul>
-                        <li>Built a machine learning model using Python (scikit-learn) for credit risk assessment</li>
-                        <li>Analyzed mobile money transaction patterns and payment history</li>
-                        <li>Created risk assessment algorithms based on behavioral data</li>
-                        <li>Developed an interactive Streamlit dashboard for model deployment</li>
-                        <li>Implemented data validation and preprocessing pipelines</li>
-                    </ul>
-                    
-                    <h3>Business Impact</h3>
-                    <div class="project-stats">
-                        <div class="stat-box">
-                            <span class="stat-value">42%</span>
-                            <span class="stat-label">More Customers</span>
-                        </div>
-                        <div class="stat-box">
-                            <span class="stat-value">5.8%</span>
-                            <span class="stat-label">Default Rate</span>
-                        </div>
-                        <div class="stat-box">
-                            <span class="stat-value">85%</span>
-                            <span class="stat-label">Model Accuracy</span>
-                        </div>
-                    </div>
-                    
-                    <div class="project-tools">
-                        <h3>Tools & Technologies</h3>
-                        <div class="tools-tags">
-                            <span class="tool-tag">Python</span>
-                            <span class="tool-tag">Machine Learning</span>
-                            <span class="tool-tag">Pandas</span>
-                            <span class="tool-tag">Scikit-learn</span>
-                            <span class="tool-tag">Streamlit</span>
-                        </div>
-                    </div>
-                    
-                    <div class="project-links">
-                        <a href="https://ghana-fintech-credit-scoring-test-run.streamlit.app/" target="_blank" class="btn btn-primary" style="margin-top: 1rem;">
-                            <i class="fas fa-external-link-alt"></i> View Live Demo
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="project-visual">
-                    <div class="project-image-container" onclick="openModal('assets/images/fintech-dashboard-1.png')">
-                        <img src="assets/images/fintech-dashboard-1.png" alt="FinTech Credit Scoring Dashboard">
-                    </div>
-                    <div class="image-caption">Main dashboard interface</div>
-                    
-                    <div class="image-gallery">
-                        <div class="gallery-item" onclick="openModal('assets/images/fintech-dashboard-2.png')">
-                            <img src="assets/images/fintech-dashboard-2.png" alt="Dashboard View 2">
-                        </div>
-                        <div class="gallery-item" onclick="openModal('assets/images/fintech-dashboard-3.png')">
-                            <img src="assets/images/fintech-dashboard-3.png" alt="Dashboard View 3">
-                        </div>
+                        <img src="assets/images/BookStore Insights Dashboard.png" alt="Bookstore Dashboard">
                     </div>
                 </div>
             </div>
-            
             <div class="project-navigation">
-                <a href="#bookstore" class="nav-btn">
-                    <i class="fas fa-arrow-up"></i> Previous Project
-                </a>
-                <a href="#assembly" class="nav-btn">
-                    <i class="fas fa-arrow-down"></i> Next Project
-                </a>
+                <a href="#gse" class="nav-btn"><i class="fas fa-arrow-up"></i> Previous</a>
+                <a href="#fintech" class="nav-btn">Next <i class="fas fa-arrow-down"></i></a>
             </div>
-            <div class="project-navigation">
-    <a href="#bookstore" class="nav-btn">
-        <i class="fas fa-arrow-up"></i> Previous Project
-    </a>
-    <a href="#assembly" class="nav-btn">
-        <i class="fas fa-arrow-down"></i> Next Project
-    </a>
-</div>
         </section>
 
-        <!-- Project 5: Assembly Line Analysis -->
-        <section id="assembly" class="project-card-full">
+        <section id="fintech" class="project-card-full">
             <div class="project-meta">
-                <span class="project-category">Operations Analytics</span>
+                <span class="project-category">Machine Learning / Risk</span>
                 <span class="project-year">2024</span>
             </div>
-            
             <div class="project-header">
-                <h2 class="project-title">Assembly Line Analysis</h2>
-                <p class="project-role">
-                    <i class="fas fa-user-tie"></i> Lead Analyst
-                </p>
+                <h2 class="project-title">FinTech Credit Scoring System</h2>
+                <p class="project-role"><i class="fas fa-user-tie"></i> Data Analyst</p>
             </div>
-            
             <div class="project-content">
                 <div class="project-details">
-                    <h3>Project Overview</h3>
-                    <p>Analyzed production and assembly line records to generate insights that help expedite repairs and plan operations for the company's growth. The project involved comprehensive data analysis to identify bottlenecks, optimize workflows, and improve overall production efficiency.</p>
-                    
-                    <h3>Key Analysis Areas</h3>
+                    <h3>Technical Solution</h3>
                     <ul>
-                        <li>Production line efficiency and bottleneck analysis</li>
-                        <li>Maintenance scheduling optimization</li>
-                        <li>Quality control metrics development</li>
-                        <li>Production forecasting models</li>
-                        <li>Cost analysis and reduction strategies</li>
+                        <li>Developed alternative credit models for Ghana's informal sector.</li>
+                        <li>85% Model Accuracy using Scikit-Learn.</li>
                     </ul>
-                    
-                    <h3>Operational Impact</h3>
                     <div class="project-stats">
-                        <div class="stat-box">
-                            <span class="stat-value">18%</span>
-                            <span class="stat-label">Faster Repairs</span>
-                        </div>
-                        <div class="stat-box">
-                            <span class="stat-value">12%</span>
-                            <span class="stat-label">Production Increase</span>
-                        </div>
-                        <div class="stat-box">
-                            <span class="stat-value">25%</span>
-                            <span class="stat-label">Cost Reduction</span>
-                        </div>
-                    </div>
-                    
-                    <div class="project-tools">
-                        <h3>Tools & Technologies</h3>
-                        <div class="tools-tags">
-                            <span class="tool-tag">Tableau</span>
-                            <span class="tool-tag">Excel</span>
-                            <span class="tool-tag">Data Analysis</span>
-                            <span class="tool-tag">Operations Research</span>
-                        </div>
+                        <div class="stat-box"><span class="stat-value">5.8%</span><span class="stat-label">Default Rate</span></div>
                     </div>
                 </div>
-                
                 <div class="project-visual">
-                    <div class="project-image-container" onclick="openModal('assets/images/Assembly Line Insights.png')">
-                        <img src="assets/images/Assembly Line Insights.png" alt="Assembly Line Analysis Dashboard">
+                    <div class="project-image-container" onclick="openModal('assets/images/fintech-dashboard-1.png')">
+                        <img src="assets/images/fintech-dashboard-1.png" alt="FinTech Dashboard">
                     </div>
-                    <div class="image-caption">Production efficiency dashboard</div>
                 </div>
             </div>
-            
             <div class="project-navigation">
-    <a href="#fintech" class="nav-btn">
-        <i class="fas fa-arrow-up"></i> Previous Project
-    </a>
-    <a href="#treasury" class="nav-btn back-to-top-btn">
-        <i class="fas fa-arrow-up"></i> Back to Top
-    </a>
-</div>
-            <!-- Add this right before </section> of the Assembly Line project -->
-<div class="project-navigation">
-    <a href="#fintech" class="nav-btn">
-        <i class="fas fa-arrow-up"></i> Previous Project
-    </a>
-    <a href="#gse" class="nav-btn back-to-top-btn">
-        <i class="fas fa-arrow-up"></i> Back to Top
-    </a>
-</div>
+                <a href="#bookstore" class="nav-btn"><i class="fas fa-arrow-up"></i> Previous</a>
+                <a href="#assembly" class="nav-btn">Next <i class="fas fa-arrow-down"></i></a>
+            </div>
+        </section>
+
+        <section id="assembly" class="project-card-full">
+            <div class="project-meta">
+                <span class="project-category">Operations Finance</span>
+                <span class="project-year">2024</span>
+            </div>
+            <div class="project-header">
+                <h2 class="project-title">Cost & Efficiency Analysis</h2>
+                <p class="project-role"><i class="fas fa-user-tie"></i> Lead Financial Analyst</p>
+            </div>
+            <div class="project-content">
+                <div class="project-details">
+                    <h3>Impact</h3>
+                    <div class="project-stats">
+                        <div class="stat-box"><span class="stat-value">25%</span><span class="stat-label">Cost Reduction</span></div>
+                    </div>
+                    <p>Optimized maintenance CapEx through downtime cost modeling.</p>
+                </div>
+                <div class="project-visual">
+                    <div class="project-image-container" onclick="openModal('assets/images/Assembly Line Insights.png')">
+                        <img src="assets/images/Assembly Line Insights.png" alt="Assembly Insights">
+                    </div>
+                </div>
+            </div>
+            <div class="project-navigation">
+                <a href="#fintech" class="nav-btn"><i class="fas fa-arrow-up"></i> Previous</a>
+                <a href="#igf-digitalization" class="nav-btn">Next <i class="fas fa-arrow-down"></i></a>
+            </div>
+        </section>
+
+        <section id="igf-digitalization" class="project-card-full">
+            <div class="project-meta">
+                <span class="project-category">Public Sector Finance</span>
+                <span class="project-year">2026</span>
+            </div>
+            <div class="project-header">
+                <h2 class="project-title">Digitalizing IGF Mobilization: TMA Case Study</h2>
+                <p class="project-role"><i class="fas fa-user-tie"></i> Financial Consultant</p>
+            </div>
+            <div class="project-content">
+                <div class="project-details">
+                    <h3>Challenge</h3>
+                    <p>Transitioning Tema Metropolitan Assembly from manual ledger tracking to a digital fiscal ecosystem to eliminate revenue leakages.</p>
+                    <ul>
+                        <li><strong>Volatility Analysis:</strong> Analyzed revenue heads to prioritize digital integration.</li>
+                        <li><strong>CAGR Projections:</strong> Forecasted a 10.22% growth in property rate mobilization.</li>
+                    </ul>
+                    <div class="project-tools">
+                        <span class="tool-tag">Fiscal Policy</span>
+                        <span class="tool-tag">Financial Modeling</span>
+                        <span class="tool-tag">Act 936 Compliance</span>
+                    </div>
+                </div>
+                <div class="project-visual">
+                    <div class="project-image-container" onclick="openModal('assets/images/yearly-actualized-igf.png')">
+                        <img src="assets/images/yearly-actualized-igf.png" alt="IGF Actualized">
+                    </div>
+                    <div class="image-gallery">
+                        <div class="gallery-item" onclick="openModal('assets/images/volatility.png')">
+                            <img src="assets/images/volatility.png" alt="Revenue Volatility">
+                        </div>
+                        <div class="gallery-item" onclick="openModal('assets/images/compliance.png')">
+                            <img src="assets/images/compliance.png" alt="Compliance Analytics">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-navigation">
+                <a href="#assembly" class="nav-btn"><i class="fas fa-arrow-up"></i> Previous</a>
+                <a href="#gse" class="nav-btn back-to-top-btn">Back to Top</a>
+            </div>
         </section>
     </div>
 
-    <!-- Image Modal -->
-    <div id="imageModal" class="modal" onclick="closeModal()">
+    <div id="imageModal" class="modal">
         <span class="close-modal" onclick="closeModal()">&times;</span>
         <img class="modal-content" id="modalImage">
     </div>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>© 2025 Kenneth Amankwah. Data Analyst Portfolio.</p>
+            <p>© 2026 Kenneth Amankwah. Financial Data Analyst Portfolio.</p>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop" title="Go to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <script>
-        // Image Modal Functionality
-        function openModal(imageSrc) {
-            const modal = document.getElementById('imageModal');
-            const modalImg = document.getElementById('modalImage');
-            
-            modal.style.display = 'flex';
-            modalImg.src = imageSrc;
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('imageModal');
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-
-        // Close modal when clicking outside the image
-        document.addEventListener('click', function(e) {
-            const modal = document.getElementById('imageModal');
-            if (e.target === modal) {
-                closeModal();
-            }
-        });
-
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeModal();
-            }
-        });
-
-        // Back to Top Functionality
-        const backToTopBtn = document.getElementById('backToTop');
-        if (backToTopBtn) {
-            window.addEventListener('scroll', function() {
-                if (window.pageYOffset > 300) {
-                    backToTopBtn.style.display = 'flex';
-                } else {
-                    backToTopBtn.style.display = 'none';
-                }
-            });
-            
-            backToTopBtn.addEventListener('click', function() {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-        }
-
-        // Mobile menu toggle (if not already in main.js)
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-        
-        if (menuToggle && navMenu) {
-            menuToggle.addEventListener('click', function() {
-                navMenu.classList.toggle('active');
-                menuToggle.querySelector('i').className = 
-                    navMenu.classList.contains('active') ? 'fas fa-times' : 'fas fa-bars';
-            });
-        }
-    </script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
