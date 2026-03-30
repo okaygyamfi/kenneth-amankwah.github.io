@@ -1,153 +1,265 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kenneth Amankwah | Financial Data Analyst</title>
+    <title>Kenneth Amankwah | Financial Data Analyst Portfolio</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Code+Pro:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header class="header">
-        <nav class="navbar container">
-            <a href="index.html" class="logo">KA<span>.</span></a>
-            <div class="menu-toggle" id="mobile-menu">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Kenneth Amankwah</span>
+                <span class="logo-sub">Financial Data Analyst</span>
+            </a>
+            
+            <button class="menu-toggle" aria-label="Toggle menu">
                 <i class="fas fa-bars"></i>
-            </div>
+            </button>
+            
             <ul class="nav-menu">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="projects.html" class="nav-link"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="about.html" class="nav-link"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li>
+                    <button class="theme-toggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <span class="badge">Financial Data Analyst</span>
-                <h1>Turning Data into <br><span class="text-primary">Financial Intelligence</span></h1>
-                <p>I specialize in revenue optimization, fiscal policy digitalization, and investment risk modeling. Helping organizations in Ghana and beyond achieve fiscal autonomy through data-driven strategies.</p>
-                <div class="hero-btns">
-                    <a href="projects.html" class="btn btn-primary">View My Work</a>
-                    <a href="contact.html" class="btn btn-outline">Let's Talk</a>
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container hero-container">
+        <div class="hero-text">
+            <h1 class="hero-title">Kenneth <span class="highlight">Amankwah</span></h1>
+            <h2 class="hero-subtitle">Data Analyst | Financial Data Analyst</h2>
+            <p class="hero-description">Transforming raw data into actionable insights that drive business growth and innovation. Specializing in Python, SQL, Power BI, and Tableau to create data-driven solutions.</p>
+            <div class="hero-buttons">
+                <a href="projects.html" class="btn btn-primary">
+                    <i class="fas fa-chart-line"></i> View Projects
+                </a>
+                <a href="about.html" class="btn btn-secondary">
+                    <i class="fas fa-user"></i> About Me
+                </a>
+            </div>
+        </div>
+        <div class="hero-visual">
+    <div class="skills-chart-container">
+        <div class="chart-title">Technical Skills Proficiency</div>
+        <div class="chart-visual">
+            <!-- Python -->
+            <div class="chart-item">
+                <span class="skill-name">Python</span>
+                <div class="chart-bar-bg">
+                    <div class="chart-bar-fill python-bar"></div>
+                </div>
+            </div>
+            <!-- SQL -->
+            <div class="chart-item">
+                <span class="skill-name">SQL</span>
+                <div class="chart-bar-bg">
+                    <div class="chart-bar-fill sql-bar"></div>
+                </div>
+            </div>
+            <!-- Power BI -->
+            <div class="chart-item">
+                <span class="skill-name">Power BI</span>
+                <div class="chart-bar-bg">
+                    <div class="chart-bar-fill powerbi-bar"></div>
+                </div>
+            </div>
+            <!-- Tableau -->
+            <div class="chart-item">
+                <span class="skill-name">Tableau</span>
+                <div class="chart-bar-bg">
+                    <div class="chart-bar-fill tableau-bar"></div>
+                </div>
+            </div>
+            <!-- Excel -->
+            <div class="chart-item">
+                <span class="skill-name">Excel</span>
+                <div class="chart-bar-bg">
+                    <div class="chart-bar-fill excel-bar"></div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section class="services bg-light">
-        <div class="container">
-            <div class="section-header">
-                <h2>Specializations</h2>
-                <p>Bridging the gap between raw data and financial growth.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-chart-pie"></i>
-                    <h3>Revenue Optimization</h3>
-                    <p>Identifying leakages and implementing digital collection systems for public and private sectors.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Risk Analytics</h3>
-                    <p>Building predictive models for credit scoring and investment portfolio volatility assessment.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-file-invoice-dollar"></i>
-                    <h3>Fiscal Strategy</h3>
-                    <p>Analyzing policy compliance (Act 936) and modeling long-term CAGR for sustainable budgeting.</p>
-                </div>
-            </div>
+        <div class="chart-legend">
+            <div class="legend-dot"></div>
+            <span>Skill Proficiency</span>
         </div>
-    </section>
+    </div>
+</div>
+</section>
 
-    <section class="featured-projects container">
-    <h2 class="section-title">Portfolio Highlights</h2>
+    <!-- Featured Projects -->
     <div class="projects-grid">
-        
-        <div class="project-card">
-            <div class="project-image">
-                <img src="assets/images/yearly-actualized-igf.png" alt="IGF Digitalization">
-            </div>
-            <div class="project-content">
-                <span class="project-tag">Public Finance</span>
-                <h3>TMA IGF Digitalization</h3>
-                <p>Strategic modeling for 10.2% revenue growth through digital fiscal policy.</p>
-                <a href="projects.html#igf-digitalization" class="project-link">Read Case Study <i class="fas fa-arrow-right"></i></a>
-            </div>
+    <!-- Project 1: Treasury Market Analysis -->
+<a href="projects.html#treasury" class="project-card-link">
+    <div class="project-card">
+        <div class="project-image">
+            <img src="assets/images/Market_Overview_Dashboard.png" alt="Ghana Treasury Market Analysis">
         </div>
-
-        <div class="project-card">
-            <div class="project-image">
-                <img src="assets/images/tbills-analysis.png" alt="T-Bills">
-            </div>
-            <div class="project-content">
-                <span class="project-tag">Investment Analytics</span>
-                <h3>Ghana T-Bills Analysis</h3>
-                <p>Forecasting yield curves and interest rate volatility for local investors.</p>
-                <a href="projects.html#t-bills" class="project-link">View Analysis <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <div class="project-image">
-                <img src="assets/images/fintech-dashboard-1.png" alt="Credit Scoring">
-            </div>
-            <div class="project-content">
-                <span class="project-tag">Risk Modeling</span>
-                <h3>Credit Scoring System</h3>
-                <p>85% accuracy model for informal sector credit assessment.</p>
-                <a href="projects.html#fintech" class="project-link">Live Demo <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-    <section id="contact" class="contact-section container fade-in">
-    <h2 class="section-title">Get In Touch</h2>
-    <div class="contact-container">
-        <div class="contact-info">
-            <h3>Let's Connect</h3>
-            
-            
-            <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <span>nanagyamfiii233@gmail.com</span>
-            </div>
-            <div class="contact-item">
-                <i class="fas fa-location-dot"></i>
-                <span>Accra, Ghana</span>
-            </div>
-        </div>
-
-        <div class="contact-links">
-            <a href="https://linkedin.com/in/kenneth-amankwah-0990a124a/" target="_blank" class="social-link">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://github.com/okaygyamfi" target="_blank" class="social-link">
-                <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="mailto:nanagyamfiii233@gmail.com" class="btn btn-primary">Send an Email</a>
+        <div class="project-content">
+            <div class="project-tag">Financial Analytics</div>
+            <h3>Treasury Market Analysis</h3>
+            <p>Bank of Ghana T-Bill analysis (2021-2025) revealing yield trends, market stress indicators, and seasonal patterns.</p>
+            <span class="project-link">View Project <i class="fas fa-arrow-right"></i></span>
         </div>
     </div>
-</section>
+</a>
+        <!-- Project 2: GSE Analysis -->
+    <a href="projects.html#gse" class="project-card-link">
+        <div class="project-card">
+            <div class="project-image">
+                <img src="assets/images/gse-dashboard.png" alt="Ghana Stock Exchange Analysis">
+            </div>
+            <div class="project-content">
+                <div class="project-tag">Financial Analytics</div>
+                <h3>GSE Performance Analysis</h3>
+                <p>Comprehensive risk assessment and performance evaluation of Ghana Stock Exchange (2021-2023).</p>
+                <span class="project-link">View Project <i class="fas fa-arrow-right"></i></span>
+            </div>
+        </div>
+    </a>
+    
+    <!-- Project 3: BookStore Insight -->
+    <a href="projects.html#bookstore" class="project-card-link">
+        <div class="project-card">
+            <div class="project-image">
+                <img src="assets/images/BookStore Insights Dashboard.png" alt="BookStore Insight Dashboard">
+            </div>
+            <div class="project-content">
+                <div class="project-tag">Power BI</div>
+                <h3>BookStore Insight</h3>
+                <p>Interactive dashboard providing key metrics for data-driven bookstore management decisions.</p>
+                <span class="project-link">View Project <i class="fas fa-arrow-right"></i></span>
+            </div>
+        </div>
+    </a>
+    
+    <!-- Project 4: FinTech Credit Scoring -->
+    <a href="projects.html#fintech" class="project-card-link">
+        <div class="project-card">
+            <div class="project-image">
+                <img src="assets/images/fintech-dashboard-1.png" alt="FinTech Credit Scoring">
+            </div>
+            <div class="project-content">
+                <div class="project-tag">Python & ML</div>
+                <h3>FinTech Credit Scoring</h3>
+                <p>Alternative credit scoring model serving 42% more customers with sustainable default rates.</p>
+                <span class="project-link">View Project <i class="fas fa-arrow-right"></i></span>
+            </div>
+        </div>
+    </a>
+    
+    <!-- Project 5: Assembly Line Analysis -->
+    <a href="projects.html#assembly" class="project-card-link">
+        <div class="project-card">
+            <div class="project-image">
+                <img src="assets/images/Assembly Line Insights.png" alt="Assembly Line Analysis">
+            </div>
+            <div class="project-content">
+                <div class="project-tag">Tableau & Excel</div>
+                <h3>Assembly Line Analysis</h3>
+                <p>Production optimization insights to expedite repairs and plan growth operations.</p>
+                <span class="project-link">View Project <i class="fas fa-arrow-right"></i></span>
+            </div>
+        </div>
+    </a>
+</div>
+<div class="text-center">
+    <a href="projects.html" class="btn btn-outline">
+        <i class="fas fa-folder-open"></i> View All 5 Projects
+    </a>
+</div>
 
+    <!-- Skills Overview -->
+    <section class="skills-section">
+        <div class="container">
+            <h2 class="section-title">Technical Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Data Analysis</h3>
+                    <p>Python (Pandas, NumPy), SQL, Statistical Analysis, Data Cleaning & Wrangling</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Data Visualization</h3>
+                    <p>Power BI, Tableau, Matplotlib, Seaborn, Interactive Dashboards</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Business Intelligence</h3>
+                    <p>KPI Development, Performance Metrics, Data-Driven Decision Making</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Tools & Technologies</h3>
+                    <p>Advanced Excel, Git, Adobe Creative Suite, Streamlit, DMS</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <a href="mailto:nanagyamfiii233@gmail.com">nanagyamfiii233@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <div>
+                            <h3>Resume</h3>
+                            <a href="assets/docs/Kenneth_Amankwah_CV.pdf" download class="btn-download">
+                                <i class="fas fa-download"></i> Download CV
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-links">
+                    <a href="https://www.linkedin.com/in/kenneth-amankwah-0990a124a/" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/okaygyamfi" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://ghana-fintech-credit-scoring-test-run.streamlit.app/" target="_blank" class="social-link">
+                        <i class="fas fa-external-link-alt"></i> FinTech Project Live Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">KA<span>.</span></div>
-                <p>© 2026 Kenneth Amankwah. Financial Data Analyst Portfolio.</p>
-                <div class="social-links">
-                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="mailto:nanagyamfiii233@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                </div>
-            </div>
+            <p>© 2025 Kenneth Amankwah. Data Analyst Portfolio.</p>
         </div>
     </footer>
 
