@@ -1,3 +1,57 @@
-title: Kenneth Amankwah
-description: Data Analyst Portfolio
-theme: minima
+# Portfolio Configuration for Kenneth Amankwah
+# Role: Financial Data Analyst
+# Last Updated: March 2026
+
+# Site Settings
+title: "Kenneth Amankwah | Financial Data Analyst"
+email: "nanagyamfiii233@gmail.com" 
+description: >-
+  Specializing in revenue optimization, fiscal policy analysis, and financial modeling. 
+  Expert at transforming complex datasets into actionable financial intelligence and 
+  strategic growth projections.
+baseurl: "" # The subpath of your site, e.g. /portfolio
+url: "https://kenneth-amankwah-portfolio.github.io" # The base hostname & protocol for your site
+
+# Author Information
+author:
+  name: "Kenneth Amankwah"
+  job_title: "Financial Data Analyst"
+  location: "Ghana"
+  linkedin: "Kenneth Amankwah" # Replace with your handle
+  github: "okaygyamfi"     # Replace with your handle
+
+# Project Portfolio Structure (Navigation & Ordering)
+# These IDs must match the 'id' attributes in your projects.html sections
+projects:
+  - id: "gse"
+    title: "Ghana Stock Exchange Market Analysis"
+    category: "Market Analytics"
+  
+  - id: "bookstore"
+    title: "Retail Insights Dashboard"
+    category: "Business Intelligence"
+  
+  - id: "fintech"
+    title: "FinTech Credit Scoring System"
+    category: "Machine Learning / Risk"
+  
+  - id: "assembly"
+    title: "Assembly Line Cost & Efficiency"
+    category: "Operations Finance"
+
+  - id: "risk-analysis"
+    title: "Investment Portfolio Risk Analytics"
+    category: "Portfolio Management"
+
+  - id: "igf-digitalization"
+    title: "Public Sector IGF Digitalization"
+    category: "Fiscal Policy / Revenue Analytics"
+
+# Build Settings
+theme: minima # Or your specific chosen Jekyll theme
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Metadata for Financial Analyst Persona
+keywords: "Financial Data Analyst, IGF Digitalization, Credit Scoring, Market Analysis, Python, SQL, Tableau, Ghana Finance"
