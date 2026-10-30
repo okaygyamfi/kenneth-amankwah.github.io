@@ -73,7 +73,3 @@ Conducted a comprehensive analysis of listed equities on the Ghana Stock Exchang
 **LinkedIn:** (https://www.linkedin.com/in/kenneth-amankwah-0990a124a/)  
 **GitHub:** (https://github.com/okaygyamfi)
 **Portfolio:** (https://okaygyamfi.github.io/kenneth-amankwah.github.io/)
-
----
-
-> “Turning data into actionable insights that drive growth and innovation.”
