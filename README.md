@@ -59,33 +59,11 @@ Conducted a comprehensive analysis of listed equities on the Ghana Stock Exchang
 
 ---
 
-### Bookstore Insights Dashboard
-**Role:** Lead Analyst  
-
-Designed a Power BI dashboard presenting key inventory and sales performance metrics to support **data-driven operational and management decisions**.
-
-**Tools:** Power BI
-
----
-
-### Daikibo Assembly Line Analysis
-**Role:** Lead Analyst  
-
-Analyzed production and assembly line data to identify operational inefficiencies and support maintenance planning. Cleaned and analyzed datasets using Excel and visualized insights in Tableau to aid **process optimization and growth planning**.
-
-**Tools:** Excel, Tableau
-
----
 
 ## Education & Certifications
 - **Data Analytics Program** – Generation Ghana  
 - **BSc. Business Administration** – University of Ghana  
 - **Data Analytics Job Simulation** – Deloitte Australia
-
----
-
-## Career Focus
-I am seeking opportunities in **financial data analytics, fintech regulation, and innovation-focused roles**, particularly within institutions involved in **financial supervision, digital finance, and policy-driven analytics**.
 
 ---
 
