@@ -81,3 +81,9 @@ figcaption{font-size:.85rem;color:var(--muted);margin-top:4px}
 .steps{padding-left:20px}
 footer{margin-top:48px;padding:24px 0 40px;text-align:center;font-size:.85rem;color:var(--muted);border-top:1px solid var(--line)}
 @media(max-width:480px){h1{font-size:1.6rem}}
+
+/* courses tab */
+.course-list{list-style:none;padding:0;margin:0 0 20px}
+.course-list li{padding:6px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.course-list .code{display:inline-block;min-width:84px;font-weight:500;color:var(--gold)}
+#p-courses h3{margin:22px 0 6px}
