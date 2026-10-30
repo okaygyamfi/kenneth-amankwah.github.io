@@ -1,283 +1,89 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kenneth Amankwah | Financial Data Analyst Portfolio</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Code+Pro:wght@300;400;500&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kenneth Amankwah | Financial Data Analyst</title>
+<script>try{document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"light")}catch(e){}</script>
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <span class="logo-text">Kenneth Amankwah</span>
-                <span class="logo-sub">Financial Data Analyst</span>
-            </a>
-            
-            <button class="menu-toggle" aria-label="Toggle menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="projects.html" class="nav-link"><i class="fas fa-project-diagram"></i> Projects</a></li>
-                <li><a href="about.html" class="nav-link"><i class="fas fa-user"></i> About</a></li>
-                <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
-                <li>
-                    <button class="theme-toggle" aria-label="Toggle theme">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-<!-- Hero Section -->
-<section class="hero">
-    <div class="container hero-container">
-        <div class="hero-text">
-            <h1 class="hero-title">Kenneth <span class="highlight">Amankwah</span></h1>
-            <h2 class="hero-subtitle">Data Analyst | Financial Data Analyst</h2>
-            <p class="hero-description">Transforming raw data into actionable insights that drive business growth and innovation. Specializing in Python, SQL, Power BI, and Tableau to create data-driven solutions.</p>
-            <div class="hero-buttons">
-                <a href="projects.html" class="btn btn-primary">
-                    <i class="fas fa-chart-line"></i> View Projects
-                </a>
-                <a href="about.html" class="btn btn-secondary">
-                    <i class="fas fa-user"></i> About Me
-                </a>
-            </div>
-        </div>
-        <div class="hero-visual">
-    <div class="skills-chart-container">
-        <div class="chart-title">Technical Skills Proficiency</div>
-        <div class="chart-visual">
-            <!-- Python -->
-            <div class="chart-item">
-                <span class="skill-name">Python</span>
-                <div class="chart-bar-bg">
-                    <div class="chart-bar-fill python-bar"></div>
-                </div>
-            </div>
-            <!-- SQL -->
-            <div class="chart-item">
-                <span class="skill-name">SQL</span>
-                <div class="chart-bar-bg">
-                    <div class="chart-bar-fill sql-bar"></div>
-                </div>
-            </div>
-            <!-- Power BI -->
-            <div class="chart-item">
-                <span class="skill-name">Power BI</span>
-                <div class="chart-bar-bg">
-                    <div class="chart-bar-fill powerbi-bar"></div>
-                </div>
-            </div>
-            <!-- Tableau -->
-            <div class="chart-item">
-                <span class="skill-name">Tableau</span>
-                <div class="chart-bar-bg">
-                    <div class="chart-bar-fill tableau-bar"></div>
-                </div>
-            </div>
-            <!-- Excel -->
-            <div class="chart-item">
-                <span class="skill-name">Excel</span>
-                <div class="chart-bar-bg">
-                    <div class="chart-bar-fill excel-bar"></div>
-                </div>
-            </div>
-        </div>
-        <div class="chart-legend">
-            <div class="legend-dot"></div>
-            <span>Skill Proficiency</span>
-        </div>
-    </div>
+<!-- Landing card -->
+<div id="overlay">
+<div id="card">
+<div>
+<div class="name">Kenneth Amankwah</div>
+<div class="role">Financial Data Analyst</div>
+<div class="sub">Markets &middot; Credit Risk &middot; Dashboards</div>
 </div>
+<div class="card-foot">
+<span>
+<a href="mailto:nanagyamfiii233@gmail.com" aria-label="Email"><i class="far fa-envelope"></i></a>
+<a href="https://www.linkedin.com/in/kenneth-amankwah-0990a124a/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+<a href="https://github.com/okaygyamfi" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+</span>
+<button id="enter">ENTER &rsaquo;</button>
+</div>
+</div>
+</div>
+<button id="returntocard" aria-label="Back to landing card">&#8963;</button>
+<header class="wrap site-header">
+<a class="brand" href="index.html">Kenneth Amankwah</a>
+<nav aria-label="Main">
+<a href="index.html" aria-current="page">Home</a>
+<a href="projects.html">Projects</a>
+<a href="about.html">About</a>
+<a href="index.html#contact">Contact</a>
+<button class="theme-toggle" aria-label="Toggle light or dark theme"></button>
+</nav>
+</header>
+<main class="wrap">
+<h1>Kenneth Amankwah</h1>
+<p>Financial Data Analyst with experience in financial markets analysis, credit risk modeling, and data-driven decision support. I analyse Ghana's treasury market, stock exchange performance, and credit scoring models for financial inclusion, using Python, SQL, Power BI, Tableau, and advanced Excel.</p>
+<p><a class="btn" href="assets/docs/Kenneth_Amankwah_CV.pdf" download><i class="fas fa-download"></i> Download CV</a></p>
+
+<div class="tabs">
+<button class="tab" aria-expanded="false" aria-controls="p-projects">Projects</button>
+<button class="tab" aria-expanded="false" aria-controls="p-experience">Experience</button>
+<button class="tab" aria-expanded="false" aria-controls="p-education">Education &amp; Certifications</button>
+</div>
+
+<section id="p-projects" class="panel" hidden>
+<div class="entry"><h3><a href="projects.html#igf">IGF Digitalization at Tema Metropolitan Assembly</a></h3><p>End-to-end automation roadmap for Internally Generated Fund mobilization, with a projected 10.22% revenue growth post-digitalization.</p></div>
+<div class="entry"><h3><a href="projects.html#treasury">Ghana Treasury Market Analysis (2021&ndash;2025)</a></h3><p>Bank of Ghana T-Bill issuances: yield trends, market stress indicators, and seasonal patterns.</p></div>
+<div class="entry"><h3><a href="projects.html#gse">Ghana Stock Exchange Performance &amp; Risk Assessment (2021&ndash;2023)</a></h3><p>Stock quality assessed through risk-adjusted returns, liquidity metrics, and price reliability.</p></div>
+<div class="entry"><h3><a href="projects.html#fintech">Credit Scoring System for Financial Inclusion</a></h3><p>Machine learning model to improve loan access in Ghana's informal sector.</p></div>
+<p><a href="projects.html">See all project details &rarr;</a></p>
 </section>
 
-    <!-- Featured Projects -->
-    <div class="projects-grid">
+<section id="p-experience" class="panel" hidden>
+<div class="entry"><h3>Data Analyst Bootcamp Graduate, Generation Ghana</h3><div class="meta">Aug 2025 &ndash; Nov 2025</div>
+<ul><li>Built data visualization, programming, and statistical analysis skills through hands-on projects in Tableau and Power BI.</li><li>Gained foundational knowledge in AI concepts and prompt engineering.</li><li>Practised communication, negotiation, and presenting data insights to varied audiences.</li></ul></div>
+<div class="entry"><h3>Sales Force Effectiveness, Nestl&eacute; Ghana Ltd</h3><div class="meta">Accra, Ghana &middot; Nov 2023 &ndash; Nov 2024</div>
+<ul><li>Cleaned, organized, and analyzed distributor sales and inventory data in Excel.</li><li>Built reports and interactive dashboards for the analytics team.</li><li>Maintained 99% accuracy and consistency in sales and inventory datasets through data validation.</li><li>Managed inventory tracking, price control, and Van Sales Men performance monitoring in the Distributor Management System, contributing to a 65% increase in sales force performance.</li></ul></div>
+<div class="entry"><h3>Deloitte Australia Data Analytics Job Simulation</h3><div class="meta">Virtual &middot; Oct 2025</div>
+<ul><li>Developed an interactive Tableau dashboard to visualize key data insights.</li><li>Used Excel to classify data and extract business insights.</li></ul></div>
+</section>
 
-    <!-- Project 1: IGF Digitalization at TMA -->
-<a href="projects.html#igf" class="project-card-link">
-    <div class="project-card">
-        <div class="project-image">
-            <img src="assets/images/compliance.png" alt="IGF Digitalization Dashboard">
-        </div>
-        <div class="project-content">
-            <div class="project-tag">Public Finance</div>
-            <h3>IGF Digitalization at TMA</h3>
-            <p>End-to-end automation of Internally Generated Fund mobilization for Tema Metropolitan Assembly, increasing revenue growth by 10.22% post-digitalization.</p>
-            <span class="project-link">View Project <i class="fas fa-arrow-right"></i></span>
-        </div>
-    </div>
-</a>
-    <!-- Project 2: Treasury Market Analysis -->
-<a href="projects.html#treasury" class="project-card-link">
-    <div class="project-card">
-        <div class="project-image">
-            <img src="assets/images/Market_Overview_Dashboard.png" alt="Ghana Treasury Market Analysis">
-        </div>
-        <div class="project-content">
-            <div class="project-tag">Financial Analytics</div>
-            <h3>Treasury Market Analysis</h3>
-            <p>Bank of Ghana T-Bill analysis (2021-2025) revealing yield trends, market stress indicators, and seasonal patterns.</p>
-            <span class="project-link">View Project <i class="fas fa-arrow-right"></i></span>
-        </div>
-    </div>
-</a>
-        <!-- Project 3: GSE Analysis -->
-    <a href="projects.html#gse" class="project-card-link">
-        <div class="project-card">
-            <div class="project-image">
-                <img src="assets/images/gse-dashboard.png" alt="Ghana Stock Exchange Analysis">
-            </div>
-            <div class="project-content">
-                <div class="project-tag">Financial Analytics</div>
-                <h3>GSE Performance Analysis</h3>
-                <p>Comprehensive risk assessment and performance evaluation of Ghana Stock Exchange (2021-2023).</p>
-                <span class="project-link">View Project <i class="fas fa-arrow-right"></i></span>
-            </div>
-        </div>
-    </a>
-    
-    <!-- Project 4: BookStore Insight -->
-    <a href="projects.html#bookstore" class="project-card-link">
-        <div class="project-card">
-            <div class="project-image">
-                <img src="assets/images/BookStore Insights Dashboard.png" alt="BookStore Insight Dashboard">
-            </div>
-            <div class="project-content">
-                <div class="project-tag">Power BI</div>
-                <h3>BookStore Insight</h3>
-                <p>Interactive dashboard providing key metrics for data-driven bookstore management decisions.</p>
-                <span class="project-link">View Project <i class="fas fa-arrow-right"></i></span>
-            </div>
-        </div>
-    </a>
-    
-    <!-- Project 5: FinTech Credit Scoring -->
-    <a href="projects.html#fintech" class="project-card-link">
-        <div class="project-card">
-            <div class="project-image">
-                <img src="assets/images/fintech-dashboard-1.png" alt="FinTech Credit Scoring">
-            </div>
-            <div class="project-content">
-                <div class="project-tag">Python & ML</div>
-                <h3>FinTech Credit Scoring</h3>
-                <p>Alternative credit scoring model serving 42% more customers with sustainable default rates.</p>
-                <span class="project-link">View Project <i class="fas fa-arrow-right"></i></span>
-            </div>
-        </div>
-    </a>
-    
-    <!-- Project 6: Assembly Line Analysis -->
-    <a href="projects.html#assembly" class="project-card-link">
-        <div class="project-card">
-            <div class="project-image">
-                <img src="assets/images/Assembly Line Insights.png" alt="Assembly Line Analysis">
-            </div>
-            <div class="project-content">
-                <div class="project-tag">Tableau & Excel</div>
-                <h3>Assembly Line Analysis</h3>
-                <p>Production optimization insights to expedite repairs and plan growth operations.</p>
-                <span class="project-link">View Project <i class="fas fa-arrow-right"></i></span>
-            </div>
-        </div>
-    </a>
-</div>
-<div class="text-center">
-    <a href="projects.html" class="btn btn-outline">
-        <i class="fas fa-folder-open"></i> View All 5 Projects
-    </a>
-</div>
+<section id="p-education" class="panel" hidden>
+<div class="entry"><h3>Data Analysis Program</h3><div class="meta">Generation Ghana &middot; November 2025</div></div>
+<div class="entry"><h3>BSc. Business Administration</h3><div class="meta">University of Ghana &middot; January 2024</div></div>
+<div class="entry"><h3>Data Analytics Job Simulation</h3><div class="meta">Deloitte Australia &middot; October 2025</div></div>
+</section>
 
-    <!-- Skills Overview -->
-    <section class="skills-section">
-        <div class="container">
-            <h2 class="section-title">Technical Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3>Data Analysis</h3>
-                    <p>Python (Pandas, NumPy), SQL, Statistical Analysis, Data Cleaning & Wrangling</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <h3>Data Visualization</h3>
-                    <p>Power BI, Tableau, Matplotlib, Seaborn, Interactive Dashboards</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Business Intelligence</h3>
-                    <p>KPI Development, Performance Metrics, Data-Driven Decision Making</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Tools & Technologies</h3>
-                    <p>Advanced Excel, Git, Adobe Creative Suite, Streamlit, DMS</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <a href="mailto:nanagyamfiii233@gmail.com">nanagyamfiii233@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-file-pdf"></i>
-                        <div>
-                            <h3>Resume</h3>
-                            <a href="assets/docs/Kenneth_Amankwah_CV.pdf" download class="btn-download">
-                                <i class="fas fa-download"></i> Download CV
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-links">
-                    <a href="https://www.linkedin.com/in/kenneth-amankwah-0990a124a/" target="_blank" class="social-link">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                    <a href="https://github.com/okaygyamfi" target="_blank" class="social-link">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <a href="https://ghana-fintech-credit-scoring-test-run.streamlit.app/" target="_blank" class="social-link">
-                        <i class="fas fa-external-link-alt"></i> FinTech Project Live Demo
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>© 2025 Kenneth Amankwah. Data Analyst Portfolio.</p>
-        </div>
-    </footer>
-
-    <script src="assets/js/main.js"></script>
+<section id="contact" style="margin-top:40px">
+<h2>Get in touch</h2>
+<ul class="contact-list">
+<li><i class="far fa-envelope"></i><a href="mailto:nanagyamfiii233@gmail.com">nanagyamfiii233@gmail.com</a></li>
+<li><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/kenneth-amankwah-0990a124a/" target="_blank" rel="noopener">LinkedIn</a></li>
+<li><i class="fab fa-github"></i><a href="https://github.com/okaygyamfi" target="_blank" rel="noopener">GitHub</a></li>
+<li><i class="fas fa-external-link-alt"></i><a href="https://ghana-fintech-credit-scoring-test-run.streamlit.app/" target="_blank" rel="noopener">FinTech Credit Scoring: live demo</a></li>
+</ul>
+</section>
+</main>
+<footer class="wrap"><p>&copy; 2026 Kenneth Amankwah. Financial Data Analyst Portfolio.</p></footer>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
